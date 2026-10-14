@@ -1,0 +1,2100 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>婆娑羅の花 바사라의 꽃</title>
+<meta name="description" content="그대를 가지는 자가, 천하를 손에 넣는다. 전국 난세, 쇼군의 마지막 후계를 둘러싼 군웅들의 쟁탈 로맨스.">
+<meta name="theme-color" content="#110c0b">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta property="og:type" content="website">
+<meta property="og:title" content="婆娑羅の花 바사라의 꽃">
+<meta property="og:description" content="그대를 가지는 자가, 천하를 손에 넣는다.">
+<meta property="og:image" content="https://oiris3355-dev.github.io/basara/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='%23c8a256' stroke='%23110c0b' stroke-width='3'%3E%3Ccircle cx='50' cy='24' r='20'/%3E%3Ccircle cx='74.7' cy='42' r='20'/%3E%3Ccircle cx='65.3' cy='71' r='20'/%3E%3Ccircle cx='34.7' cy='71' r='20'/%3E%3Ccircle cx='25.3' cy='42' r='20'/%3E%3C/g%3E%3Ccircle cx='50' cy='50' r='15' fill='%23110c0b'/%3E%3Ccircle cx='50' cy='50' r='9' fill='%23c8a256'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Song+Myung&family=Yuji+Syuku&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lacquer:#110c0b; --ink:#1a1412; --ink-2:#241c19; --line:#3a2e27;
+  --gold:#c8a256; --gold-dim:#7d6638; --crimson:#a8231c; --crimson-hi:#c02d23;
+  --gofun:#efe6d4; --nezumi:#a39787;
+  --f-display:'Song Myung','Noto Serif KR','Noto Serif CJK KR',serif;
+  --f-body:'Noto Serif KR','Noto Serif CJK KR',serif;
+  --f-kanji:'Yuji Syuku','Noto Serif JP','Noto Serif CJK JP',serif;
+  --wrap:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--lacquer);color:var(--gofun);font-family:var(--f-body);font-size:17px;line-height:1.8;word-break:keep-all;overflow-wrap:anywhere}
+body.locked{overflow:hidden}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ── gate ── */
+.gate{position:fixed;inset:0;z-index:100;background:#0a0606;overflow:hidden;transition:transform 1.7s cubic-bezier(.76,0,.24,1)}
+.gate.lift{transform:translateY(-100%)}
+.gate-bg{position:absolute;inset:-60px;background:center/cover no-repeat;filter:blur(30px) brightness(.42);transform:scale(1.1)}
+.gate-stage{position:absolute;top:0;bottom:0;left:50%;transform:translateX(-50%);aspect-ratio:832/1216;background:center/cover no-repeat;box-shadow:0 0 80px 30px rgba(0,0,0,.6)}
+.gate-title{position:absolute;height:72vh;height:72svh;top:50%;left:calc(50% + 34.2svh + 3vw);transform:translateY(-50%);transition:opacity .6s}
+.gate-actions{position:absolute;left:50%;bottom:calc(7svh + env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:12px;width:max-content;max-width:calc(100vw - 40px);transition:opacity .6s}
+.gate-notice{margin:0;max-width:100%;padding:8px 14px;border:1px solid rgba(200,162,86,.35);border-radius:2px;background:rgba(10,6,6,.78);color:var(--gofun);font-size:14px;line-height:1.6;text-align:center}
+.gate.lift .gate-title,.gate.lift .gate-actions{opacity:0}
+.btn-enter{border:1px solid rgba(200,162,86,.7);background:var(--crimson);color:var(--gofun);padding:13px 38px;font-size:18px;font-weight:600;letter-spacing:.12em;border-radius:2px;cursor:pointer;box-shadow:0 8px 30px rgba(0,0,0,.55)}
+.btn-enter:hover{background:var(--crimson-hi)}
+.btn-quiet{border:0;background:none;color:var(--gofun);opacity:.8;font-size:14px;text-decoration:underline;text-underline-offset:4px;cursor:pointer;text-shadow:0 1px 6px #000}
+@media (max-aspect-ratio:141/100){
+  .gate-title{left:auto;right:calc(50% - 34.2svh + 2.5svh);top:5svh;height:46svh;transform:none}
+}
+@media (max-aspect-ratio:832/1216){
+  .gate-stage{left:0;right:0;transform:none;aspect-ratio:auto}
+  .gate-title{right:5vw;top:calc(5svh + env(safe-area-inset-top));height:44svh}
+}
+
+/* ── hero ── */
+.hero{position:relative;height:100vh;height:100svh;overflow:hidden;background:#000}
+.track{position:absolute;inset:0;display:flex;transition:transform .7s cubic-bezier(.65,0,.35,1)}
+.slide{position:relative;flex:0 0 100%;height:100%;overflow:hidden;container-type:size}
+.slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.slide img.hero-rot{inset:auto;left:50%;top:50%;width:100cqh;height:100cqw;max-width:none;transform:translate(-50%,-50%) rotate(90deg);object-position:50% var(--hero-focus,60%)}
+.hero-shade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top,rgba(10,6,6,.88),rgba(10,6,6,0) 40%)}
+.hero-title{position:absolute;left:5vw;top:calc(5svh + env(safe-area-inset-top));height:44svh;filter:drop-shadow(0 6px 18px rgba(0,0,0,.5))}
+.hero-foot{position:absolute;left:6vw;right:6vw;bottom:calc(5svh + env(safe-area-inset-bottom))}
+.hero-copy{margin:0 0 22px;font-size:clamp(15px,1.6vw,19px);line-height:2;text-shadow:0 1px 10px rgba(0,0,0,.9)}
+.hero-copy span{display:block}
+.hero-now{display:flex;align-items:center;flex-wrap:wrap;gap:4px 16px;font-size:14px;color:var(--nezumi)}
+#hero-name{border:0;background:none;padding:0;cursor:pointer;font-family:var(--f-display);font-size:19px;color:var(--gofun);white-space:nowrap;text-shadow:0 1px 8px #000}
+#hero-name:hover{color:var(--gold)}
+.hero-now span{white-space:nowrap}
+.bars{display:flex;flex-wrap:wrap;flex-basis:100%;gap:0 4px}
+.bars button{display:grid;place-items:center;width:44px;height:44px;padding:0;border:0;background:none;border-radius:2px;cursor:pointer;touch-action:manipulation}
+.bars button::before{content:"";width:22px;height:6px;border:1px solid rgba(239,230,212,.55);background:rgba(17,12,11,.55);transition:background .2s,border-color .2s;box-shadow:0 1px 6px rgba(0,0,0,.45)}
+.bars button:hover::before{border-color:var(--gold);background:rgba(200,162,86,.4)}
+.bars button.on::before{border-color:var(--gold);background:var(--gold)}
+.hero-nav{position:absolute;z-index:2;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:52px;height:52px;padding:0;border:1px solid rgba(200,162,86,.65);border-radius:50%;background:rgba(17,12,11,.65);color:var(--gofun);box-shadow:0 4px 18px rgba(0,0,0,.3);cursor:pointer;touch-action:manipulation;transition:background .2s,border-color .2s}
+.hero-nav:hover{background:rgba(17,12,11,.9);border-color:var(--gold);color:var(--gold)}
+.hero-nav svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.hero-prev{left:max(20px,2vw,env(safe-area-inset-left))}
+.hero-next{right:max(20px,2vw,env(safe-area-inset-right))}
+.hero-nav[hidden],.bars[hidden]{display:none}
+@media (min-aspect-ratio:1/1){
+  .slide img{object-position:50% 30%}
+  .hero-shade{background:linear-gradient(to right,rgba(10,6,6,.6),rgba(10,6,6,0) 34%),linear-gradient(to top,rgba(10,6,6,.88),rgba(10,6,6,0) 36%)}
+  .hero-title{top:7svh;height:56svh}
+  .hero-foot{right:auto;max-width:46vw}
+}
+@media (max-aspect-ratio:1/1){
+  .hero-foot{right:76px}
+  .hero-now{flex-wrap:wrap;gap:6px 12px}
+  .hero-nav{width:44px;height:44px;top:55%}
+  .hero-prev{left:max(12px,env(safe-area-inset-left))}
+  .hero-next{right:max(12px,env(safe-area-inset-right))}
+}
+@media (max-width:600px){
+  .bars{gap:0;max-width:100%}
+  .bars button{flex:1 1 0;min-width:0;max-width:44px}
+  .bars button::before{width:min(22px,70%)}
+}
+@media (max-width:360px){
+  .slide img.hero-rot{object-position:50% calc(var(--hero-focus,60%) - 5%)}
+}
+
+/* ── nav ── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;gap:28px;padding:10px max(20px,4vw);background:rgba(17,12,11,.9);border-bottom:1px solid var(--line);transform:translateY(-105%);transition:transform .35s}
+.nav.show{transform:none}
+.brand{font-family:var(--f-kanji);font-size:22px;color:var(--gold);text-decoration:none;line-height:1}
+.nav-links{display:flex;gap:22px;margin:0 0 0 auto;padding:0;list-style:none;font-size:15px}
+.nav-links a{text-decoration:none;color:var(--nezumi)}
+.nav-links a:hover{color:var(--gofun)}
+.crack-btn{display:inline-block;background:var(--crimson);color:var(--gofun);text-decoration:none;padding:7px 16px;font-size:14px;font-weight:600;border-radius:2px;white-space:nowrap}
+.crack-btn:hover{background:var(--crimson-hi)}
+.menu-btn{display:none;margin-left:auto;border:1px solid var(--line);background:none;width:40px;height:36px;cursor:pointer;font-size:18px;line-height:1}
+@media (max-width:820px){
+  .menu-btn{display:block}
+  .nav{flex-wrap:wrap;gap:12px}
+  .nav-links{display:none;order:3;flex-basis:100%;flex-direction:column;gap:0;margin:0}
+  .nav-links a{display:block;padding:12px 2px;border-top:1px solid var(--line);color:var(--gofun)}
+  .nav.menu-open .nav-links{display:flex}
+  .nav .crack-btn{order:2}
+}
+
+/* ── sections ── */
+.sec{padding:clamp(72px,10vw,128px) max(20px,5vw)}
+.sec.ink{background:var(--ink)}
+.wrap{max-width:var(--wrap);margin:0 auto}
+.sec-head{display:flex;align-items:center;gap:18px;margin:0 0 clamp(28px,4vw,48px)}
+.seal{writing-mode:vertical-rl;font-family:var(--f-kanji);background:var(--crimson);color:var(--gofun);padding:10px 7px;font-size:19px;line-height:1;letter-spacing:.14em;border-radius:3px;flex:none}
+.sec-head h2{font-family:var(--f-display);font-weight:400;font-size:clamp(30px,4.2vw,44px);line-height:1.2;margin:0}
+.sec-head p{margin:4px 0 0;color:var(--nezumi);font-size:15px}
+.zoom{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
+
+/* basara */
+.basara{padding:clamp(40px,6vw,88px) max(20px,5vw)}
+.basara-figure{margin:0}
+.basara .zoom{max-width:var(--wrap);margin:0 auto}
+.basara img{width:100%;height:auto}
+.basara-copy{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+.basara-hint{display:none;margin:10px 0 0;text-align:center;font-size:13.5px;color:var(--nezumi)}
+@media (max-width:900px){
+  .basara-figure{display:grid;grid-template-columns:1.15fr 1fr;background:var(--ink);border:1px solid var(--line);border-radius:3px;overflow:hidden}
+  .basara .zoom{aspect-ratio:4/3;overflow:hidden}
+  .basara img{height:100%;object-fit:cover;object-position:0% 50%}
+  .basara-copy{position:static;width:auto;height:auto;margin:0;padding:24px 22px;overflow:visible;clip:auto;clip-path:none;white-space:normal}
+  .basara-copy h2{margin:0 0 12px;font:400 36px/1.3 var(--f-display);color:var(--gold)}
+  .basara-copy p{margin:0 0 9px;font-size:17px;line-height:1.9}
+  .basara-copy p:last-child{margin-bottom:0}
+  .basara-hint{display:block;grid-column:1/-1;margin:0;padding:10px 12px;background:var(--lacquer);font-size:12.5px}
+}
+@media (max-width:600px){
+  .basara-figure{display:block}
+}
+
+/* prologue */
+.comic{max-width:640px;margin:0 auto}
+.comic img{width:100%;height:auto}
+.comic-rest{overflow:hidden;max-height:0;transition:max-height 1.4s ease}
+.comic-fade{position:relative;height:0}
+.comic-fade::before{content:"";position:absolute;left:0;right:0;bottom:0;height:160px;background:linear-gradient(to top,var(--lacquer),rgba(17,12,11,0));pointer-events:none}
+.comic.opened .comic-fade{display:none}
+.more-btn{display:block;margin:26px auto 0;border:1px solid var(--gold-dim);background:var(--ink);padding:12px 28px;font-size:16px;cursor:pointer;border-radius:2px}
+.more-btn:hover{border-color:var(--gold)}
+.more-btn small{color:var(--nezumi);margin-left:8px;font-size:13px}
+
+/* characters */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px}
+.filters button{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:transparent;padding:6px 14px;border-radius:999px;font-size:15px;color:var(--nezumi);cursor:pointer}
+.filters button i{width:9px;height:9px;border-radius:2px;background:var(--fc)}
+.filters button[aria-pressed="true"]{color:var(--gofun);border-color:var(--gold-dim);background:var(--ink-2)}
+.roster{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.roster li[hidden]{display:none}
+.card{display:block;width:100%;padding:0;border:0;border-top:3px solid var(--fc);background:var(--lacquer);text-align:left;cursor:pointer}
+.card-img{display:block;position:relative;aspect-ratio:3/4;overflow:hidden;background:#000;container-type:size}
+.card-meta{display:block;padding:11px 14px 14px}
+.card-role{display:block;font-size:13px;line-height:1.5;color:var(--nezumi)}
+.card-meaning{display:block;margin-top:4px;font-size:13px;line-height:1.5;color:var(--nezumi)}
+.card-name{display:block;font-family:var(--f-display);font-size:20px;line-height:1.35}
+.card:hover .card-name,.card:focus-visible .card-name{color:var(--gold)}
+img.rot{position:absolute;left:50%;top:50%;width:100cqh;height:100cqw;max-width:none;transform:translate(-50%,-50%) rotate(90deg);object-fit:cover}
+img.flat{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 18%}
+.ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:10px;background:#120d0c;overflow:hidden}
+.ph::before{content:"";position:absolute;inset:0;background:var(--fc);opacity:.18}
+.ph::after{content:"";position:absolute;inset:0;background:radial-gradient(90% 70% at 50% 35%,rgba(0,0,0,0),rgba(0,0,0,.55))}
+.ph b{position:relative;z-index:1;writing-mode:vertical-rl;font-family:var(--f-kanji);font-weight:400;font-size:clamp(44px,13cqw,84px);line-height:1.1;color:var(--gofun)}
+.ph svg{position:relative;z-index:1;width:clamp(18px,9cqw,30px);opacity:.85}
+@media (max-width:900px){.roster{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:600px){.roster{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card-name{font-size:18px}}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:80;display:none;align-items:center;justify-content:center;background:rgba(6,4,4,.84);padding:4vh 76px}
+.modal.open{display:flex}
+.m-box{position:relative;display:grid;grid-template-columns:minmax(0,46fr) minmax(0,54fr);width:min(1080px,100%);height:min(720px,92vh);background:var(--ink);border:1px solid var(--line);overflow:hidden}
+.m-img{position:relative;overflow:hidden;background:#000;container-type:size}
+.m-tag{position:absolute;z-index:2;top:16px;left:16px;display:flex;align-items:center;gap:8px;padding:4px 11px;border:1px solid var(--fc);background:rgba(10,6,6,.6);font-size:13px;line-height:1.6}
+.m-tag b{font-family:var(--f-kanji);font-weight:400;color:var(--fc);font-size:15px}
+.m-info{overflow-y:auto;padding:38px 42px 44px;overscroll-behavior:contain}
+.m-name{font-family:var(--f-display);font-weight:400;font-size:clamp(28px,3vw,38px);color:var(--fc);margin:0 0 12px;line-height:1.25}
+.m-name span{font-family:var(--f-kanji);font-size:.58em;color:var(--nezumi);margin-left:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0 0 8px}
+.chips li{background:var(--ink-2);border:1px solid var(--line);border-radius:999px;padding:2px 12px;font-size:14px}
+.m-role-note{margin:12px 0 20px;padding:10px 14px;border-left:2px solid var(--fc);background:rgba(239,230,212,.035);color:#d5cbb9;font-size:15px;line-height:1.65}
+.m-sec h4{font-size:13px;font-weight:600;color:var(--gold);letter-spacing:.06em;margin:24px 0 9px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.m-sec p{margin:0;font-size:16px;line-height:1.85}
+.m-points{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.m-points h5{margin:0 0 3px;font-size:16px;font-weight:600;line-height:1.5;color:var(--gofun)}
+.m-points p{font-size:15px;line-height:1.65;color:#c9beac}
+.m-points.compact{gap:8px}
+.m-points.compact h5{display:inline;margin-right:7px;font-size:14px;color:var(--nezumi)}
+.m-points.compact p{display:inline}
+.m-more{margin-top:22px;border:1px solid var(--line);border-radius:2px}
+.m-more summary{padding:10px 12px;font-size:14px;color:var(--nezumi);cursor:pointer}
+.m-more summary:hover{color:var(--gold)}
+.m-more[open] summary{border-bottom:1px solid var(--line);color:var(--gold)}
+.m-more-content{padding:0 14px 16px}
+.m-more-content h5{margin:16px 0 6px;font-size:13px;color:var(--gold)}
+.m-more-content p{margin:0;font-size:14px;line-height:1.75;color:var(--nezumi)}
+.secret-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:16px;border:1px dashed var(--gold-dim);background:rgba(0,0,0,.2);color:var(--nezumi);font-size:15px;cursor:pointer}
+.secret-btn:hover{color:var(--gofun);border-color:var(--gold)}
+.secret-body{overflow:hidden;max-height:0;transition:max-height .55s ease}
+.secret-body p{padding:16px 2px 2px}
+.thumbs{display:flex;flex-wrap:wrap;gap:8px}
+.thumbs button{width:84px;height:84px;padding:0;border:1px solid var(--line);background:#000;cursor:zoom-in;overflow:hidden}
+.thumbs img{width:100%;height:100%;object-fit:cover}
+.m-close{position:absolute;z-index:3;top:12px;right:12px;width:40px;height:40px;border:1px solid var(--line);background:rgba(17,12,11,.85);cursor:pointer;font-size:18px}
+.m-nav{position:fixed;z-index:81;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:rgba(17,12,11,.9);cursor:pointer;font-size:24px;line-height:1}
+.m-prev{left:14px}.m-next{right:14px}
+@media (max-width:760px){
+  .modal{padding:0}
+  .m-box{display:block;width:100%;height:100%;border:0;overflow-y:auto;overscroll-behavior:contain}
+  .m-img{height:60svh}
+  .m-info{overflow:visible;padding:26px 22px 90px}
+  .m-nav{position:absolute;top:calc(30svh - 21px);transform:none;width:42px;height:42px;background:rgba(17,12,11,.7)}
+  .m-prev{left:8px}.m-next{right:8px}
+}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:120;display:none;align-items:center;justify-content:center;background:rgba(5,3,3,.95)}
+.lb.open{display:flex}
+.lb img{max-width:94vw;max-height:86vh;max-height:86svh;object-fit:contain}
+.lb-close{position:absolute;top:14px;right:14px;width:44px;height:44px;border:1px solid var(--line);background:rgba(17,12,11,.85);cursor:pointer;font-size:18px}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:rgba(17,12,11,.8);cursor:pointer;font-size:24px;line-height:1}
+.lb-prev{left:12px}.lb-next{right:12px}
+.lb-count{position:absolute;bottom:16px;left:0;right:0;text-align:center;font-size:14px;color:var(--nezumi)}
+.lb-zoom{position:fixed;z-index:2;top:14px;left:16px;min-height:44px;padding:7px 14px;border:1px solid var(--gold-dim);border-radius:2px;background:linear-gradient(140deg,#2d1e13,#100b08);color:var(--gofun);font-size:14px;cursor:pointer}
+.lb-zoom[hidden]{display:none}
+.lb-zoom:disabled{opacity:.5;cursor:wait}
+.lb.open.zoomed{display:block;overflow:auto;padding:70px 16px 50px;overscroll-behavior:contain}
+.lb.zoomed #lb-img{width:var(--lb-native-width);max-width:none;max-height:none;height:auto;margin:0 auto}
+.lb.zoomed .lb-close{position:fixed;z-index:2}
+.lb.zoomed .lb-nav{display:none}
+.lb.zoomed .lb-count{position:fixed;bottom:0;padding:7px;background:rgba(5,3,3,.9)}
+
+/* world */
+.faction-icon{display:inline-grid;place-items:center;width:24px;height:24px;flex:none;color:var(--fc,var(--gold))}
+.crest-img{display:block;width:100%;height:100%;max-width:100%;object-fit:contain}
+.filters .faction-icon{width:28px;height:28px}
+.card-symbol{position:absolute;z-index:2;left:10px;bottom:10px;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:rgba(10,6,6,.82);color:var(--fc);box-shadow:0 2px 12px rgba(0,0,0,.4)}
+.card-symbol .faction-icon{width:44px;height:44px}
+.m-tag .faction-icon{width:28px;height:28px}
+.m-tag>i{width:9px;height:9px;background:var(--fc);border-radius:50%}
+.house-mark .faction-icon{width:48px;height:48px}
+.pgroup h3>.faction-icon{width:28px;height:28px;align-self:center}
+#world{padding-top:72px}
+#world .sec-head{margin-bottom:20px}
+#world .sec-head h2{font-size:36px}
+.world-key{margin:0 0 22px;padding:16px 20px;border-left:3px solid var(--gold);background:linear-gradient(90deg,rgba(200,162,86,.12),rgba(200,162,86,.025))}
+.world-key small{display:block;margin-bottom:6px;font-size:13px;color:var(--gold);letter-spacing:.04em}
+.world-key h3{margin:0 0 6px;font-family:var(--f-display);font-size:clamp(22px,2.4vw,26px);font-weight:400;line-height:1.35}
+.world-key p{margin:0;font-size:15px;color:#d5cbb9;line-height:1.65}
+.power-map{padding:20px 24px 16px;border:1px solid var(--line);background:radial-gradient(70% 50% at 50% 0%,rgba(200,162,86,.05),transparent)}
+.power-ruler{display:flex;align-items:center;justify-content:center;gap:16px;max-width:440px;margin:0 auto;padding:12px 20px;border:1px solid var(--gold-dim);background:var(--ink);text-align:left;font-size:14px;line-height:1.4}
+.power-ruler-symbol{display:block;width:56px;height:56px;flex:none}
+.power-ruler small{display:block;font-size:13px;color:var(--nezumi)}
+.power-ruler h3{margin:0;font-family:var(--f-display);font-size:28px;font-weight:400;line-height:1.25;color:var(--gold)}
+.power-ruler-status{display:block;font-size:13px;line-height:1.4;color:var(--nezumi)}
+.power-bridge{position:relative;height:76px;display:flex;align-items:center;justify-content:center;text-align:center}
+.power-bridge::before{content:"";position:absolute;inset:0 auto 0 50%;border-left:1px dashed var(--gold-dim)}
+.power-bridge p{position:relative;z-index:1;margin:0;padding:5px 10px;background:var(--lacquer);font-size:14px;line-height:1.45;color:var(--gofun)}
+.power-bridge b{font-weight:600}
+.power-bridge small{display:block;font-size:12px;color:var(--nezumi)}
+.power-houses{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.power-houses::before{content:"";position:absolute;top:-15px;left:calc((100% - 48px)/6);right:calc((100% - 48px)/6);border-top:1px dashed var(--gold-dim)}
+.power-house{position:relative;padding:16px 14px;border:1px solid var(--line);border-top:3px solid var(--fc);background:var(--ink);text-align:center;min-width:0;font-size:14px;line-height:1.5}
+.power-house::before{content:"";position:absolute;top:-18px;left:50%;height:15px;border-left:1px dashed var(--gold-dim)}
+.power-family-head{display:flex;align-items:center;justify-content:center;gap:10px;min-height:46px}
+.power-family-head>.faction-icon{width:56px;height:56px}
+.power-house h3{margin:0;font-family:var(--f-display);font-size:clamp(17px,2.5vw,22px);font-weight:400;line-height:1.4;color:var(--gofun)}
+.power-region{display:block;font-size:13px;color:var(--nezumi)}
+.power-strength{display:block;margin:6px 0 12px;font-size:13px;font-weight:600;color:var(--gofun)}
+.power-person{padding-top:10px;border-top:1px solid var(--line)}
+.power-person strong{display:block;font-family:var(--f-display);font-size:clamp(20px,3vw,24px);font-weight:400;line-height:1.35}
+.power-person span{display:block;font-size:13px;color:var(--nezumi);line-height:1.5}
+.power-support{position:relative;margin-top:16px;padding-top:10px;border-top:1px solid var(--line)}
+.power-support::before{content:"";position:absolute;left:50%;top:-17px;height:16px;border-left:1px solid var(--line)}
+.power-support strong{display:block;font-size:17px;font-weight:600;line-height:1.4}
+.power-support span{display:block;font-size:13px;line-height:1.5;color:var(--nezumi)}
+.power-legend{margin:14px 0 0;text-align:center;font-size:12px;line-height:1.5;color:var(--nezumi)}
+.power-legend span{margin-right:6px;color:var(--gold-dim);font-size:16px;vertical-align:middle}
+.power-others{display:grid;gap:12px;margin:22px 0 28px}
+.power-others>div{display:flex;align-items:baseline;gap:20px;padding:14px 22px;border-bottom:1px solid var(--line)}
+.power-others h3{margin:0;flex:0 0 100px;font-size:15px;font-weight:600;color:var(--gold)}
+.power-others p{min-width:0;margin:0;font-size:15px;line-height:1.8;color:var(--nezumi)}
+.power-others strong{color:var(--gofun);font-weight:600}
+.power-other-divider{margin:0 10px;color:var(--gold-dim)}
+.world-more{margin:28px 0 24px;border:1px solid var(--line);border-radius:2px}
+.world-more summary{padding:14px 20px;color:var(--gold);font-size:16px;cursor:pointer}
+.world-more summary:hover{background:rgba(200,162,86,.06)}
+.world-more[open] summary{border-bottom:1px solid var(--line)}
+.world-more-content{padding:clamp(20px,3vw,36px)}
+.world-more .lead{font-size:17px;margin-bottom:24px}
+.world-more .terms{margin-bottom:24px}
+.world-more .heir{margin-top:28px;padding:28px 24px}
+.world-factions-title{margin:0 0 16px;font-family:var(--f-display);font-size:24px;font-weight:400}
+.world-next{display:flex;justify-content:flex-end}
+.world-next a{display:inline-flex;align-items:center;gap:18px;min-height:44px;padding:10px 18px;border:1px solid var(--gold-dim);color:var(--gold);text-decoration:none;font-size:16px}
+.world-next a:hover{background:rgba(200,162,86,.08);border-color:var(--gold)}
+@media (max-width:600px){
+  body .fabs{right:max(6px,env(safe-area-inset-right));bottom:calc(8px + env(safe-area-inset-bottom));gap:6px}
+  .fabs .fab{width:40px;height:40px;font-size:16px}
+  .world-key{padding:18px;margin-bottom:24px}
+  .world-key p{font-size:15px}
+  .power-map{padding:20px 12px 16px}
+  .power-ruler{gap:12px;padding:14px}
+  .power-ruler-symbol{width:48px;height:48px}
+  .power-ruler h3{font-size:26px}
+  .power-bridge{height:88px}
+  .power-bridge p{padding:5px 6px;font-size:13px}
+  .power-bridge small{font-size:12px}
+  .power-houses{gap:10px}
+  .power-houses::before{left:calc((100% - 20px)/6);right:calc((100% - 20px)/6)}
+  .power-house{padding:12px 4px}
+  .power-family-head{flex-direction:column;gap:6px;min-height:66px}
+  .power-family-head>.faction-icon{width:48px;height:48px}
+  .power-house h3{font-size:clamp(12px,3.7vw,15px);white-space:nowrap}
+  .power-region{font-size:12px}
+  .power-strength{font-size:12px;margin:9px 0 12px;line-height:1.5;min-height:36px;display:flex;align-items:center;justify-content:center}
+  .power-person strong{font-size:clamp(14px,4.5vw,19px)}
+  .power-person span{font-size:12px}
+  .power-support strong{font-size:15px}
+  .power-support span{font-size:12px}
+  .power-legend{font-size:12px}
+  .power-others>div{display:block;padding:14px 18px}
+  .power-others h3{margin-bottom:5px;font-size:14px}
+  .power-others p{font-size:14px}
+  .power-other-divider{margin:0 4px}
+}
+@media (max-width:360px){
+  .nav{padding:10px 12px;gap:8px}
+  .nav .brand{font-size:18px}
+  .nav .menu-btn{width:36px}
+  .nav .crack-btn{font-size:12px;padding:7px 10px}
+}
+
+.lead{font-size:17px;margin-bottom:24px}
+.world-more .terms{margin-bottom:24px}
+.world-more .heir{margin-top:28px;padding:28px 24px}
+.world-next{display:flex;justify-content:flex-end}
+.world-next a{display:inline-flex;align-items:center;gap:18px;min-height:44px;padding:10px 18px;border:1px solid var(--gold-dim);color:var(--gold);text-decoration:none;font-size:16px}
+.world-next a:hover{background:rgba(200,162,86,.08);border-color:var(--gold)}
+@media (max-width:860px){.world-intro{grid-template-columns:1fr;gap:12px}.world-step{padding:20px 22px}.world-step small{margin-bottom:7px}.world-step h3{font-size:22px}.world-faction-notes{grid-template-columns:1fr;gap:10px}}
+.lead{max-width:760px;font-size:clamp(18px,2vw,21px);line-height:1.9;margin:0 0 clamp(40px,5vw,64px)}
+.terms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:0 0 clamp(40px,5vw,64px)}
+.term{display:flex;gap:22px;align-items:flex-start;padding:28px 28px 26px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(200,162,86,.07),rgba(0,0,0,0) 70%)}
+.term-k{writing-mode:vertical-rl;font-family:var(--f-kanji);font-size:42px;line-height:1.05;color:var(--gold);flex:none}
+.term h3{font-family:var(--f-display);font-weight:400;font-size:27px;margin:0 0 10px;line-height:1.2}
+.term p{margin:0 0 10px;font-size:16px}
+.term p:last-child{margin:0}
+@media (max-width:600px){.term{padding:22px 20px;gap:14px}.term-k{font-size:32px}}
+.houses{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-bottom:18px}
+.house{background:var(--ink);border-top:3px solid var(--fc);padding:26px 26px 24px}
+.house-head{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+.house-mark{display:grid;place-items:center;width:54px;height:54px;border:1px solid var(--fc);font-family:var(--f-kanji);font-size:26px;color:var(--fc);flex:none}
+.house h3{font-family:var(--f-display);font-weight:400;font-size:26px;margin:0;line-height:1.2}
+.house h3 small{display:block;font-family:var(--f-body);font-size:13px;color:var(--nezumi);margin-top:3px}
+.house p{margin:0 0 14px;font-size:16px}
+.house dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:14px}
+.house dt{color:var(--gold)}
+.house dd{margin:0}
+.duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.panel{background:var(--ink);padding:26px}
+.panel h3{font-family:var(--f-display);font-weight:400;font-size:24px;margin:0 0 10px}
+.panel p{margin:0;font-size:16px}
+.heir{position:relative;margin-top:clamp(48px,6vw,80px);padding:clamp(36px,5vw,56px) clamp(24px,5vw,64px);text-align:center;border:1px solid var(--gold-dim);background:radial-gradient(70% 90% at 50% 0%,rgba(200,162,86,.12),rgba(0,0,0,0))}
+.heir-crest{display:block;width:56px;height:56px;margin:0 auto 14px}
+.heir h3{font-family:var(--f-display);font-weight:400;font-size:clamp(26px,3.4vw,36px);margin:0 0 12px}
+.heir p{margin:0 auto;max-width:560px;font-size:17px}
+@media (max-width:860px){.houses,.duo,.terms{grid-template-columns:1fr}}
+
+/* map: a single map with illuminated places */
+#map{padding-block:clamp(44px,5vw,64px)}
+#map .sec-head{margin-bottom:18px}
+.map-fig{margin:0}
+.map-canvas{position:relative;width:min(100%,90svh);aspect-ratio:3/2;margin:0 auto;border:1px solid var(--gold-dim);border-radius:4px;background:#0b0807;overflow:hidden;isolation:isolate}
+.map-canvas>img{width:100%;height:100%;object-fit:contain}
+.map-pin{position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%);display:grid;place-items:center;width:44px;height:44px;padding:0;border:0;border-radius:50%;background:none;color:var(--fc);cursor:pointer;touch-action:manipulation;z-index:2}
+.map-pin-dot{position:relative;width:14px;height:14px;border:2px solid #fff3ce;border-radius:50%;background:var(--fc);box-shadow:0 0 7px 3px rgba(255,235,161,.8),0 0 18px 6px rgba(0,0,0,.7)}
+.map-pin-dot.has-crest{width:30px;height:30px;padding:2px;border-width:1px;background:rgba(10,6,6,.9)}
+.map-pin-dot::before{content:"";position:absolute;inset:-7px;border:2px solid #ffe9a9;border-radius:50%;animation:map-pulse 2.6s ease-out infinite;animation-delay:var(--delay,0s)}
+.map-pin-name{position:absolute;top:36px;left:50%;transform:translateX(-50%);padding:2px 9px;border:1px solid rgba(200,162,86,.7);border-radius:3px;background:rgba(17,12,11,.9);color:var(--gofun);font-size:12px;line-height:1.6;white-space:nowrap;pointer-events:none}
+.map-pin:hover .map-pin-dot,.map-pin:focus-visible .map-pin-dot{background:#fff3ce;box-shadow:0 0 10px 4px #ffe9a9}
+@keyframes map-pulse{0%{opacity:.8;transform:scale(.65)}75%,100%{opacity:0;transform:scale(1.7)}}
+.map-caption{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:4px 16px;margin:10px 0 12px;color:var(--nezumi);font-size:13px;text-align:center}
+.map-expand{border:0;background:none;padding:4px 0;color:var(--gold);font-size:13px;text-decoration:underline;text-underline-offset:4px;cursor:zoom-in}
+.map-keys{display:flex;justify-content:center;flex-wrap:wrap;gap:7px}
+.map-key{display:flex;align-items:center;gap:5px;min-height:44px;padding:3px 10px;border:1px solid var(--line);border-radius:4px;background:var(--lacquer);font-size:13px;cursor:pointer;touch-action:manipulation}
+.map-key:hover,.map-key:focus-visible{border-color:var(--gold);background:var(--ink-2)}
+.map-key .faction-icon{width:24px;height:24px}
+.map-key-dot{width:8px;height:8px;border-radius:50%;background:var(--fc)}
+.place-dialog{width:min(540px,calc(100vw - 32px));max-height:calc(100svh - 40px);padding:0;border:1px solid var(--gold-dim);border-radius:8px;background:var(--ink);color:var(--gofun);box-shadow:0 20px 80px #000;overflow:auto;overscroll-behavior:contain}
+.place-dialog::backdrop{background:rgba(5,3,3,.82)}
+.place-dialog-bar{display:flex;align-items:flex-start;justify-content:flex-end;position:sticky;top:0;z-index:2;height:0;padding:0 12px;pointer-events:none}
+.place-faction{text-align:center;padding:28px 0 24px;margin-bottom:24px;border-bottom:1px solid var(--line)}
+.place-faction.is-plain{padding-top:66px}
+.place-crest-row{display:flex;justify-content:center;align-items:center;gap:16px;margin-bottom:16px}
+.place-crest{display:block;width:136px;height:112px;flex:none}
+.place-crest-row.is-pair .place-crest{width:96px;height:80px}
+.place-faction-title{margin:0;font:400 30px/1.4 var(--f-display);color:var(--gofun)}
+.place-close{display:grid;place-items:center;flex:none;width:44px;height:44px;margin-top:12px;padding:0;border:1px solid var(--line);border-radius:4px;background:var(--lacquer);font-size:18px;cursor:pointer;pointer-events:auto}
+.place-body{padding:0 26px 26px}
+.place-body h3{font-family:var(--f-display);font-size:26px;line-height:1.3;font-weight:400;margin:4px 0 18px}
+.place-body h3 small{display:block;margin-top:6px;font-family:var(--f-kanji);font-size:15px;color:var(--nezumi)}
+.place-switches{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 20px}
+.place-switches[hidden]{display:none}
+.place-switches button{flex:1;min-height:44px;padding:7px 10px;border:1px solid var(--line);border-radius:4px;background:var(--lacquer);font-size:13px;white-space:nowrap;cursor:pointer}
+.place-switches button[aria-pressed="true"]{border-color:var(--gold);background:rgba(200,162,86,.12);color:var(--gold)}
+.place-picture{margin:0 0 20px;border:1px solid rgba(200,162,86,.35);border-radius:3px;overflow:hidden;background:#0b0807}
+.place-picture img{display:block;width:100%;height:auto}
+.place-brief{margin:0 0 16px;font-size:16px;line-height:1.8}
+.place-tags{display:flex;flex-wrap:wrap;gap:7px;list-style:none;padding:0;margin:0 0 24px}
+.place-tags li{padding:3px 9px;border:1px solid var(--line);border-radius:3px;font-size:12px;color:var(--nezumi)}
+.place-people h4{margin:0 0 8px;font-size:13px;font-weight:400;color:var(--gold)}
+.who{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0;padding:0}
+.who li{font-size:14px;border:1px solid var(--line);border-radius:999px;padding:2px 12px}
+.place-more{margin-top:24px;border-top:1px solid var(--line)}
+.place-more summary{padding:12px 0 0;color:var(--nezumi);font-size:13px;cursor:pointer}
+.place-more p{margin:12px 0 0;font-size:14px;line-height:1.8;color:var(--nezumi)}
+@media(max-width:600px){
+  .map-pin-name{display:none}
+  .map-pin-dot.has-crest{width:26px;height:26px}
+  .map-caption{font-size:12px;gap:0 12px}
+  .map-key{padding-inline:8px;font-size:12px}
+  .place-dialog-bar{padding-inline:12px}
+  .place-faction{padding-top:26px;margin-bottom:20px}
+  .place-crest{width:116px;height:96px}
+  .place-crest-row.is-pair .place-crest{width:82px;height:68px}
+  .place-faction-title{font-size:26px}
+  .place-body{padding:0 20px 22px}
+  .place-body h3{font-size:24px}
+  .place-switches button{padding-inline:6px;font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){.map-pin-dot::before{animation:none;opacity:.5;transform:scale(1)}}
+@media(max-width:360px){.place-crest-row.is-pair{padding-top:32px}}
+
+/* guide: relations */
+.sub-h{font-family:var(--f-display);font-weight:400;font-size:24px;margin:0 0 6px}
+.sub-p{margin:0 0 20px;color:var(--nezumi);font-size:15px}
+.rels{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;list-style:none;margin:0;padding:0}
+.rels li{display:flex;gap:12px;align-items:flex-start;background:var(--lacquer);padding:14px}
+.rels .e{font-size:24px;line-height:1.2}
+.rels b{display:block;font-weight:600;font-size:15.5px}
+.rels span{display:block;font-size:13.5px;color:var(--nezumi);line-height:1.6}
+@media (max-width:900px){.rels{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* persona generator */
+#persona{padding-block:clamp(48px,6vw,76px);background:radial-gradient(ellipse at 50% 30%,rgba(200,162,86,.07),transparent 65%)}
+.persona-wrap{max-width:720px;margin:auto}
+.persona-heading{text-align:center;margin-bottom:26px}
+.persona-heading>span{font-size:11px;letter-spacing:.2em;color:var(--gold)}
+.persona-heading h2{font:400 clamp(32px,4vw,44px)/1.3 var(--f-display);color:var(--gold);margin:10px 0 12px}
+.persona-heading p{font-size:15px;color:var(--nezumi);margin:0}
+.persona-fields{display:grid;grid-template-columns:2fr 1fr;gap:14px;max-width:580px;margin:0 auto 20px}
+.persona-fields label{display:block;font-size:13px;color:var(--nezumi)}
+.persona-fields input,.persona-fields select{display:block;width:100%;min-height:46px;margin-top:6px;padding:10px 12px;border:1px solid var(--line);border-radius:3px;background:var(--ink);color:var(--gofun);font:inherit;font-size:14px}
+.persona-fields input::placeholder{color:var(--nezumi);font-size:13px}
+.persona-fields select{color-scheme:dark}
+.persona-trigger{text-align:center}
+.persona-primary,.persona-secondary{min-height:46px;padding:10px 24px;border:1px solid var(--gold-dim);border-radius:3px;cursor:pointer;font:inherit;font-size:15px}
+.persona-primary{background:var(--crimson);color:var(--gofun)}
+.persona-primary:hover{background:var(--crimson-hi);border-color:var(--gold)}
+.persona-secondary{background:var(--lacquer);color:var(--gofun);border-color:var(--line)}
+.persona-secondary:hover{border-color:var(--gold)}
+.persona-primary:disabled,.persona-secondary:disabled{opacity:.55;cursor:wait}
+.persona-dialog{width:min(720px,calc(100vw - 32px));max-width:calc(100vw - 32px);max-height:calc(100svh - 32px);padding:0;border:1px solid var(--gold-dim);border-radius:7px;background:var(--ink);color:var(--gofun);box-shadow:0 20px 80px #000;overflow:auto;overscroll-behavior:contain}
+.persona-dialog::backdrop{background:rgba(5,3,3,.84)}
+.persona-dialog-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;position:sticky;top:0;z-index:2;padding:10px 18px;background:var(--ink);border-bottom:1px solid var(--line)}
+.persona-dialog-bar>span{font-size:13px;color:var(--nezumi)}
+.persona-close{width:44px;height:44px;flex:none;border:1px solid var(--line);border-radius:3px;background:var(--lacquer);color:var(--gofun);font-size:18px;cursor:pointer}
+.persona-document{padding:22px 28px 8px}
+.persona-doc-head{display:flex;align-items:center;gap:12px;padding-bottom:16px;border-bottom:1px solid var(--gold-dim)}
+.persona-emblem{display:block;width:48px;height:48px;flex:none}
+.persona-doc-head p{margin:0;font-size:11px;letter-spacing:.12em;color:var(--nezumi)}
+.persona-doc-head h3{margin:2px 0 0;font:400 30px/1.3 var(--f-display);color:var(--gold)}
+.persona-stamp{margin-left:auto;flex:none;border:1px solid #a84c37;border-radius:2px;padding:5px 10px;color:#dc8467;font-size:13px;letter-spacing:.12em;transform:rotate(-5deg)}
+.persona-identity{padding:18px 0 16px}
+.persona-identity h4{margin:0 0 6px;font:400 28px/1.4 var(--f-display);overflow-wrap:anywhere}
+.persona-identity p{margin:0;color:var(--nezumi);font-size:13px;line-height:1.7}
+.persona-type{display:inline-block;margin-top:10px;padding:3px 10px;border:1px solid var(--gold-dim);border-radius:3px;font-size:13px;color:var(--gold)}
+.persona-summary{margin:0;padding:12px 0;border-top:1px solid var(--line);font-size:14px;line-height:1.8}
+.persona-details{display:grid;grid-template-columns:1fr 1fr;gap:0 22px;margin:0}
+.persona-details>div{display:grid;grid-template-columns:70px 1fr;gap:10px;padding:11px 0;border-top:1px solid var(--line);align-items:start}
+.persona-details>.wide{grid-column:1/-1}
+.persona-details dt{font-size:12px;color:var(--gold);padding-top:2px}
+.persona-details dd{margin:0;font-size:14px;line-height:1.7}
+.persona-actions{position:sticky;bottom:0;z-index:2;padding:12px 28px 14px;background:var(--ink);border-top:1px solid var(--line)}
+.persona-action-row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.persona-actions p{margin:7px 0 0;text-align:center;font-size:12px;line-height:1.6;color:var(--nezumi)}
+#persona-copy-status{min-height:19px;color:var(--gold)}
+#persona-copy-status:empty{display:none}
+.persona-copy-text{display:block;width:100%;min-height:160px;margin-top:12px;padding:12px;border:1px solid var(--gold-dim);background:var(--lacquer);color:var(--gofun);font:inherit;font-size:13px}
+.persona-copy-text[hidden]{display:none}
+@media(max-width:600px){
+  .persona-fields{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:10px}
+  .persona-fields input,.persona-fields select{font-size:16px;padding-inline:10px}
+  .persona-fields input::placeholder{font-size:12px}
+  .persona-document{padding:12px 18px 4px}
+  .persona-doc-head{padding-bottom:10px}
+  .persona-doc-head h3{font-size:27px}
+  .persona-identity{padding:12px 0}
+  .persona-identity h4{font-size:25px}
+  .persona-type{margin-top:6px}
+  .persona-emblem{width:40px;height:40px}
+  .persona-stamp{padding:4px 7px;font-size:12px}
+  .persona-details{grid-template-columns:1fr}
+  .persona-details>div{grid-template-columns:68px minmax(0,1fr);gap:8px;padding-block:9px}
+  .persona-details dd{line-height:1.6}
+  .persona-actions{padding:12px 16px}
+  .persona-action-row>*{flex:1;padding-inline:12px}
+}
+@media(max-width:360px){
+  .persona-doc-head{gap:8px}
+  .persona-doc-head h3{font-size:22px;white-space:nowrap}
+  .persona-emblem{width:30px;height:30px}
+  .persona-stamp{padding:3px 5px;font-size:11px}
+}
+
+/* begin */
+.begin{text-align:center;padding-block:clamp(96px,14vw,180px)}
+.begin-crest{display:block;width:58px;height:58px;margin:0 auto 22px}
+.begin h2{font-family:var(--f-display);font-weight:400;font-size:clamp(30px,5vw,54px);line-height:1.45;margin:0 0 36px}
+.begin h2 span{display:block}
+.begin .crack-btn{font-size:18px;padding:15px 40px}
+
+footer{padding:40px max(20px,5vw) 56px;border-top:1px solid var(--line);text-align:center;font-size:13.5px;color:var(--nezumi)}
+footer .brand{display:inline-block;font-size:26px;margin-bottom:10px}
+footer p{margin:2px 0}
+
+/* floating buttons */
+.fabs{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:calc(16px + env(safe-area-inset-bottom));z-index:60;display:flex;flex-direction:column;gap:10px}
+.fab{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:rgba(17,12,11,.88);cursor:pointer;font-size:18px;line-height:1;display:grid;place-items:center}
+.fab[hidden]{display:none}
+.fab.muted{color:var(--nezumi);text-decoration:line-through}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .gate,.track,.comic-rest,.secret-body,.nav{transition:none!important}
+}
+/* ── 금박 · 옻칠 장식 ── */
+:root{
+  --wave-pattern:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='80' viewBox='0 0 160 80'%3E%3Cg fill='none' stroke='%23c8a256' stroke-opacity='.1' stroke-width='.65'%3E%3Cpath d='M0 80a40 40 0 0 1 80 0M10 80a30 30 0 0 1 60 0M20 80a20 20 0 0 1 40 0M30 80a10 10 0 0 1 20 0M80 80a40 40 0 0 1 80 0M90 80a30 30 0 0 1 60 0M100 80a20 20 0 0 1 40 0M110 80a10 10 0 0 1 20 0M-40 40a40 40 0 0 1 80 0M-30 40a30 30 0 0 1 60 0M-20 40a20 20 0 0 1 40 0M-10 40a10 10 0 0 1 20 0M40 40a40 40 0 0 1 80 0M50 40a30 30 0 0 1 60 0M60 40a20 20 0 0 1 40 0M70 40a10 10 0 0 1 20 0M120 40a40 40 0 0 1 80 0M130 40a30 30 0 0 1 60 0M140 40a20 20 0 0 1 40 0M150 40a10 10 0 0 1 20 0'/%3E%3C/g%3E%3C/svg%3E");
+  --gold-ornament:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 20'%3E%3Cg fill='none' stroke='%23c8a256' stroke-width='.8'%3E%3Cpath d='M0 10h95m50 0h95M104 10l7-5 9 5-9 5zM120 10l9-5 7 5-7 5z'/%3E%3C/g%3E%3Ccircle cx='120' cy='10' r='2' fill='%23c8a256'/%3E%3C/svg%3E");
+  --shogun-art:url('https://raw.githubusercontent.com/oiris3355-dev/basara/main/%EC%87%BC%EA%B5%B0%EA%B0%80%EB%AC%B8%EC%9E%A5.png');
+}
+body{background-image:radial-gradient(ellipse at 50% 0%,#29170f 0,transparent 65%)}
+.nav{background:linear-gradient(180deg,rgba(28,17,12,.97),rgba(10,7,6,.94));border-bottom-color:rgba(200,162,86,.4);box-shadow:0 5px 28px rgba(0,0,0,.3);backdrop-filter:blur(14px)}
+.brand{text-shadow:0 1px 8px rgba(200,162,86,.2)}
+.nav-links a{position:relative;transition:color .2s}
+.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);transform:scaleX(0);transition:transform .2s;pointer-events:none}
+.nav-links a:hover::after,.nav-links a:focus-visible::after{transform:scaleX(1)}
+.crack-btn,.persona-primary,.btn-enter{background:linear-gradient(145deg,#c13b28 0,#a8231c 40%,#65130e 100%);border-color:var(--gold-dim);box-shadow:inset 0 1px 0 rgba(255,230,186,.2),0 4px 18px rgba(0,0,0,.3)}
+.crack-btn:hover,.persona-primary:hover,.btn-enter:hover{background:linear-gradient(145deg,#db4b33,#a8231c 60%,#781b10)}
+.sec{position:relative;isolation:isolate;background-color:var(--lacquer);background-image:radial-gradient(ellipse at 85% 0%,rgba(200,162,86,.07),transparent 55%)}
+.sec.ink{background-color:#18100d;background-image:radial-gradient(ellipse at 15% 0%,rgba(132,56,24,.13),transparent 65%),linear-gradient(180deg,#1b120e,#100b09)}
+.sec::before{content:"";position:absolute;inset:0;z-index:-1;background-image:var(--wave-pattern);mask-image:linear-gradient(180deg,#000,transparent 65%);pointer-events:none}
+.sec::after{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:clamp(140px,24vw,240px);height:20px;background:var(--gold-ornament) center/contain no-repeat;opacity:.8;pointer-events:none}
+.sec-head::after{content:"";flex:1;min-width:18px;height:1px;margin-left:12px;background:linear-gradient(90deg,rgba(200,162,86,.65),rgba(200,162,86,.05));pointer-events:none}
+.sec-head h2{text-shadow:0 2px 14px rgba(200,162,86,.14);letter-spacing:.035em}
+.seal{background:linear-gradient(150deg,#c13a27,#841a13 80%);box-shadow:inset 0 0 0 2px rgba(255,222,177,.16),0 3px 12px rgba(0,0,0,.25);transform:rotate(-2deg)}
+.basara-figure{position:relative;box-shadow:0 18px 45px rgba(0,0,0,.32)}
+.basara-figure::after{content:"";position:absolute;inset:8px;border:1px solid rgba(200,162,86,.4);pointer-events:none}
+.basara-copy{background:radial-gradient(ellipse at 100% 0%,rgba(200,162,86,.09),transparent 65%)}
+.comic-first,.comic-rest{box-shadow:0 10px 40px rgba(0,0,0,.3)}
+.more-btn,.world-next a,.persona-secondary{background:linear-gradient(135deg,#2b1c13,#100b09);border-color:var(--gold-dim);box-shadow:inset 0 1px rgba(239,230,212,.07),0 5px 14px rgba(0,0,0,.18)}
+.world-key{position:relative;isolation:isolate;overflow:hidden;border:1px solid rgba(200,162,86,.3);border-left:3px solid var(--gold);background:linear-gradient(110deg,#302114,#17100c);box-shadow:inset 0 1px rgba(239,230,212,.06),0 8px 24px rgba(0,0,0,.2)}
+.world-key::after{content:"";position:absolute;right:14px;top:50%;transform:translateY(-50%);width:160px;height:132px;z-index:-1;background:var(--shogun-art) center/contain no-repeat;opacity:.12;pointer-events:none}
+.power-map{position:relative;border-color:var(--gold-dim);background:radial-gradient(ellipse at 50% 0%,rgba(200,162,86,.12),transparent 58%),linear-gradient(150deg,#1e1510,#0f0a08);box-shadow:0 12px 38px rgba(0,0,0,.3),inset 0 1px rgba(239,230,212,.08)}
+.power-map::before{content:"";position:absolute;inset:7px;border:1px solid rgba(200,162,86,.13);pointer-events:none}
+.power-ruler{border-color:var(--gold);background:linear-gradient(135deg,#342417,#17100b);box-shadow:inset 0 0 0 4px rgba(200,162,86,.06),0 5px 20px rgba(0,0,0,.25)}
+.power-ruler-symbol,.power-family-head .faction-icon{filter:drop-shadow(0 2px 6px rgba(200,162,86,.2))}
+.power-house{isolation:isolate;background:linear-gradient(150deg,color-mix(in srgb,var(--fc) 17%,#201611),#100b09 80%);box-shadow:inset 0 0 0 5px rgba(239,230,212,.025),0 7px 18px rgba(0,0,0,.25)}
+.power-house::after{content:"";position:absolute;inset:0;z-index:-1;background:var(--house-art) right -30px bottom -20px/150px auto no-repeat;opacity:.085;pointer-events:none}
+.power-person strong{text-shadow:0 2px 10px rgba(0,0,0,.5)}
+.power-support strong{color:#d7b87b}
+.power-others{background:linear-gradient(120deg,rgba(200,162,86,.07),rgba(0,0,0,.15));box-shadow:inset 0 1px rgba(200,162,86,.1)}
+.world-more,.m-more{border-color:rgba(200,162,86,.28);background:linear-gradient(135deg,rgba(200,162,86,.045),rgba(0,0,0,.08))}
+.house,.term,.panel,.heir{background:linear-gradient(135deg,#251a13,#130d09);box-shadow:inset 0 1px rgba(239,230,212,.06),0 7px 22px rgba(0,0,0,.2)}
+.house-mark{border-color:var(--gold-dim);background:radial-gradient(circle,rgba(200,162,86,.12),transparent 70%)}
+.filters button,.map-key{background:linear-gradient(150deg,rgba(48,32,19,.75),rgba(12,8,6,.8));box-shadow:inset 0 1px rgba(239,230,212,.055);transition:border-color .2s,color .2s,background .2s}
+.filters button[aria-pressed="true"]{border-color:var(--gold);background:linear-gradient(150deg,#4a331b,#21150e);color:var(--gofun);box-shadow:inset 0 0 0 2px rgba(200,162,86,.1),0 2px 12px rgba(0,0,0,.2)}
+.card{position:relative;box-shadow:0 7px 24px rgba(0,0,0,.38),inset 0 0 0 1px rgba(200,162,86,.2);transition:transform .25s,box-shadow .25s}
+.card::after{content:"";position:absolute;inset:7px;border:1px solid rgba(200,162,86,.28);pointer-events:none}
+.card-img::after{content:"";position:absolute;inset:60% 0 0;background:linear-gradient(transparent,rgba(8,5,4,.32));pointer-events:none}
+.card-meta{background:linear-gradient(115deg,#261b13,#0f0907)}
+.card-role{color:#b9a68c}
+.card-name{color:#f2dfb5}
+.card-symbol{background:radial-gradient(circle at 45% 35%,#392618,#0c0806 75%);box-shadow:0 0 0 1px rgba(200,162,86,.45),0 3px 15px rgba(0,0,0,.65)}
+.map-canvas{border-color:#be9852;border-radius:2px;box-shadow:0 0 0 4px #251b10,0 0 0 5px #7d6638,0 14px 45px rgba(0,0,0,.5)}
+.map-key:hover,.map-key:focus-visible{border-color:var(--gold);background:linear-gradient(150deg,#493219,#1b100b)}
+.rels li{background:linear-gradient(140deg,#251a12,#100b09);box-shadow:inset 0 0 0 1px rgba(200,162,86,.2),inset 0 1px rgba(239,230,212,.09),0 4px 14px rgba(0,0,0,.2)}
+.rels .e{filter:drop-shadow(0 1px 5px rgba(200,162,86,.2))}
+.rels b{color:#e7d6b5}
+#persona{background:radial-gradient(ellipse at 50% 30%,rgba(200,162,86,.12),transparent 65%),linear-gradient(180deg,#170e0b,#0d0907)}
+.persona-wrap{position:relative;isolation:isolate}
+.persona-wrap::before{content:"";position:absolute;inset:-24px -32px;z-index:-1;border:1px solid rgba(200,162,86,.3);background:linear-gradient(120deg,rgba(200,162,86,.04),rgba(0,0,0,.12));box-shadow:inset 0 0 0 6px rgba(200,162,86,.025),0 10px 36px rgba(0,0,0,.3);pointer-events:none}
+.persona-heading h2{text-shadow:0 2px 18px rgba(200,162,86,.18)}
+.persona-fields input,.persona-fields select{border-color:rgba(200,162,86,.32);background:linear-gradient(145deg,#231811,#100b08);box-shadow:inset 0 2px 6px rgba(0,0,0,.3)}
+.persona-trigger .persona-primary{min-width:180px;letter-spacing:.12em;box-shadow:inset 0 0 0 3px rgba(239,230,212,.06),0 6px 24px rgba(99,19,12,.3)}
+.place-dialog,.persona-dialog,.m-box{border-color:#9d7b43;border-radius:4px;background:radial-gradient(ellipse at 50% 0%,rgba(200,162,86,.08),transparent 60%),linear-gradient(145deg,#20160f,#120c09);box-shadow:0 0 0 4px rgba(15,10,7,.65),0 24px 90px rgba(0,0,0,.7),inset 0 0 0 5px rgba(200,162,86,.04);scrollbar-color:var(--gold-dim) #100b09}
+.place-faction{background:radial-gradient(ellipse at 50% 25%,rgba(200,162,86,.13),transparent 65%);border-bottom-color:rgba(200,162,86,.45)}
+.place-crest{filter:drop-shadow(0 3px 10px rgba(200,162,86,.18))}
+.place-faction-title{color:#f1dfb9;text-shadow:0 2px 12px rgba(200,162,86,.15)}
+.place-tags li,.chips li,.who li{border-color:rgba(200,162,86,.25);background:linear-gradient(140deg,rgba(200,162,86,.065),rgba(0,0,0,.12))}
+.place-more{border-top-color:rgba(200,162,86,.3)}
+.place-close,.persona-close,.m-close,.menu-btn,.fab{border-color:rgba(200,162,86,.4);background:linear-gradient(140deg,#2d1e13,#100b08);box-shadow:inset 0 1px rgba(239,230,212,.08),0 3px 12px rgba(0,0,0,.3)}
+.m-info{background:radial-gradient(ellipse at 100% 0%,rgba(200,162,86,.07),transparent 65%)}
+.m-name{color:color-mix(in srgb,var(--fc) 65%,#f2dfb5)}
+.m-sec h4{position:relative;padding-left:14px;border-bottom-color:rgba(200,162,86,.28)}
+.m-sec h4::before{content:"";position:absolute;left:1px;top:8px;width:5px;height:5px;background:var(--gold);transform:rotate(45deg);pointer-events:none}
+.m-tag{background:linear-gradient(140deg,rgba(39,26,17,.92),rgba(9,6,4,.86));box-shadow:0 4px 18px rgba(0,0,0,.3)}
+.persona-dialog-bar,.persona-actions{background:linear-gradient(130deg,#25190f,#140d09);border-color:rgba(200,162,86,.3)}
+.persona-stamp{background:rgba(168,35,28,.09);box-shadow:inset 0 0 0 2px rgba(168,35,28,.1)}
+#begin{background-image:radial-gradient(ellipse at 50% 30%,rgba(149,48,23,.19),transparent 65%),linear-gradient(180deg,#1b110c,#0b0706)}
+.begin-crest{filter:drop-shadow(0 2px 12px rgba(200,162,86,.25))}
+.begin h2{text-shadow:0 2px 28px rgba(200,162,86,.15)}
+footer{background:linear-gradient(180deg,#170f0b,#090605);border-top-color:rgba(200,162,86,.35)}
+@media(hover:hover) and (pointer:fine){
+  .card:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(0,0,0,.48),0 0 0 1px rgba(200,162,86,.5)}
+  .filters button:hover{border-color:var(--gold);color:var(--gofun)}
+}
+@media(max-width:820px){.nav-links a::after{bottom:0}}
+@media(max-width:760px){.m-box{border-radius:0}}
+@media(max-width:600px){
+  .sec::before{opacity:.65}
+  .sec-head::after{margin-left:0;min-width:12px}
+  .sec-head:has(>div)::after{display:none}
+  .world-key::after{width:110px;height:90px;opacity:.06}
+  .power-house::after{background-size:105px auto;opacity:.07}
+  .card::after{inset:5px;border-color:rgba(200,162,86,.25)}
+  .persona-wrap::before{inset:-18px -10px}
+  .basara-figure::after{inset:5px;border-color:rgba(200,162,86,.2)}
+}
+@media(prefers-reduced-motion:reduce){
+  .card,.nav-links a,.nav-links a::after,.filters button,.map-key{transition:none}
+  .card:hover{transform:none}
+}
+/* ── 붉은 꽃잎의 바람 ── */
+.gate{transition-duration:1.55s}
+.gate-actions{gap:14px;bottom:calc(6svh + env(safe-area-inset-bottom))}
+.entry-button-wrap{position:relative;isolation:isolate;width:278px;max-width:100%;padding:10px}
+.btn-enter{position:relative;display:block;width:100%;min-height:72px;padding:15px 36px;border:1px solid #d6ae68;border-radius:2px;background:radial-gradient(ellipse at 40% 0%,rgba(226,98,70,.25),transparent 75%),linear-gradient(135deg,#96232b,#5b111b 75%,#350a12);box-shadow:0 0 0 4px #1b0a0a,0 0 0 5px rgba(200,162,86,.5),0 9px 28px rgba(0,0,0,.5),inset 0 1px rgba(255,226,169,.25);font:400 23px/1.3 var(--f-display);letter-spacing:.2em;text-indent:.2em;text-shadow:0 2px 3px #31080c;transition:box-shadow .25s,background .25s}
+.btn-enter::before{content:"";position:absolute;inset:7px;border:1px solid rgba(229,187,108,.48);pointer-events:none}
+.btn-enter::after{content:"";position:absolute;inset:-5px;background:linear-gradient(#f2d294,#f2d294) top left/18px 1px no-repeat,linear-gradient(#f2d294,#f2d294) top left/1px 18px no-repeat,linear-gradient(#f2d294,#f2d294) bottom right/18px 1px no-repeat,linear-gradient(#f2d294,#f2d294) bottom right/1px 18px no-repeat;pointer-events:none}
+.btn-enter:hover{background:radial-gradient(ellipse at 40% 0%,rgba(255,140,96,.3),transparent 75%),linear-gradient(135deg,#b42b35,#751824 75%,#420c17);box-shadow:0 0 0 4px #1b0a0a,0 0 0 5px #d9b06c,0 0 32px rgba(186,32,49,.3),inset 0 1px rgba(255,226,169,.3)}
+.btn-enter:focus-visible{outline:2px solid #f5d58d;outline-offset:9px}
+.btn-enter:disabled,.btn-quiet:disabled{cursor:default}
+.btn-quiet{text-decoration:none;border-bottom:1px solid rgba(200,162,86,.4);padding:3px 8px;color:#dfc99e}
+.entry-bloom{position:fixed;inset:0;z-index:110;isolation:isolate;overflow:hidden;pointer-events:none;perspective:900px}
+.entry-bloom[hidden]{display:none}
+.entry-bloom.active::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 20% 80%,rgba(122,9,30,.18),transparent 65%);animation:entry-veil 1.5s ease-out both}
+.bloom-petal{position:absolute;left:0;top:0;width:var(--size);height:calc(var(--size)*.38);opacity:0;animation:entry-petal var(--duration) linear var(--delay) both;will-change:transform,opacity}
+.bloom-petal span{display:block;position:relative;width:100%;height:100%;border-radius:75% 8% 70% 12%;background:linear-gradient(165deg,#f27879 2%,#d24354 22%,#a3183a 54%,#580c2c 88%);box-shadow:inset 0 1px rgba(255,186,173,.38),inset -2px -1px 4px rgba(63,4,24,.3),0 2px 4px rgba(0,0,0,.16);animation:petal-flutter var(--flutter) ease-in-out var(--delay) infinite alternate;transform-origin:35% 55%}
+.bloom-petal span::after{content:"";position:absolute;left:12%;top:49%;width:76%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,156,140,.36),transparent);transform:rotate(12deg)}
+.bloom-petal.is-far{filter:blur(.6px);z-index:0}
+.bloom-petal.is-near{filter:blur(1px);z-index:2}
+@keyframes entry-veil{0%,100%{opacity:0}25%,55%{opacity:1}}
+@keyframes entry-petal{
+  0%{opacity:0;transform:translate3d(var(--x0),var(--y0),0) rotate(var(--r0))}
+  15%{opacity:var(--alpha)}
+  48%{opacity:var(--alpha);transform:translate3d(var(--x1),var(--y1),0) rotate(var(--r1))}
+  80%{opacity:var(--alpha)}
+  100%{opacity:0;transform:translate3d(var(--x2),var(--y2),0) rotate(var(--r2))}
+}
+@keyframes petal-flutter{
+  0%{transform:rotateX(20deg) rotateY(-30deg) rotate(-12deg) scaleX(.9)}
+  50%{transform:rotateX(-28deg) rotateY(48deg) rotate(8deg) scaleX(.65)}
+  100%{transform:rotateX(32deg) rotateY(-18deg) rotate(18deg) scaleX(1)}
+}
+@media(max-width:360px){.btn-enter{font-size:22px}}
+@media(prefers-reduced-motion:reduce){.entry-bloom{display:none!important}.btn-enter{transition:none}.gate{transition:none!important}}
+/* 단색 바탕 위에 카타나 코너 장식을 고정 */
+body{position:relative;isolation:isolate;background:var(--lacquer)}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:url('https://raw.githubusercontent.com/oiris3355-dev/basara/main/%EC%9D%BC%EB%B3%B8%ED%92%8D%20%EA%B8%88%EB%B9%9B%20%EC%B9%B4%ED%83%80%EB%82%98%20%EC%BD%94%EB%84%88%20%EC%9E%A5%EC%8B%9D.png') right bottom/clamp(420px,48vw,720px) auto no-repeat;opacity:.32;pointer-events:none}
+.sec,.sec.ink,#persona,#begin,footer{background:transparent}
+.sec::before{display:none}
+@media(max-width:600px){body::before{background-size:min(72vw,300px) auto;opacity:.2}}
+</style>
+</head>
+<body class="locked">
+
+<div class="gate" id="gate" role="dialog" aria-modal="true" aria-label="입장" aria-describedby="gate-notice">
+  <div class="gate-bg" data-bg="STAGE"></div>
+  <div class="gate-stage" data-bg="STAGE"></div>
+  <img class="gate-title" data-src="TITLE" alt="婆娑羅の花 바사라의 꽃">
+  <div class="gate-actions">
+    <p class="gate-notice" id="gate-notice">유혈 이미지가 포함되어 있습니다</p>
+    <div class="entry-button-wrap"><button class="btn-enter" id="enter" type="button">입장하기</button></div>
+    <button class="btn-quiet" id="enter-quiet">소리 없이 입장</button>
+  </div>
+</div>
+
+<div class="entry-bloom" id="entry-bloom" aria-hidden="true" hidden></div>
+
+<nav class="nav" id="nav" aria-label="메뉴">
+  <a class="brand" href="#top">婆娑羅の花</a>
+  <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="메뉴 열기">☰</button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#prologue">프롤로그</a></li>
+    <li><a href="#world">세계관</a></li>
+    <li><a href="#characters">등장인물</a></li>
+    <li><a href="#map">지도</a></li>
+    <li><a href="#guide">관계 이모지</a></li>
+    <li><a href="#persona">페르소나</a></li>
+  </ul>
+  <a class="crack-btn" data-crack href="#begin">크랙에서 시작</a>
+</nav>
+
+<main id="top">
+  <section class="hero" id="hero" aria-label="바사라의 꽃 · 인물 슬라이드" aria-roledescription="캐러셀" tabindex="0">
+    <div class="track" id="track" aria-hidden="true"></div>
+    <div class="hero-shade"></div>
+    <img class="hero-title" data-src="TITLE" alt="婆娑羅の花 바사라의 꽃">
+    <button class="hero-nav hero-prev" id="hero-prev" type="button" aria-label="이전 인물 보기" aria-controls="track" title="이전 인물"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
+    <button class="hero-nav hero-next" id="hero-next" type="button" aria-label="다음 인물 보기" aria-controls="track" title="다음 인물"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+    <div class="hero-foot">
+      <p class="hero-copy"><span>막이 오른 난세의 무대 위,</span><span>모든 시선이 단 한 사람을 향한다.</span><span>쇼군의 마지막 핏줄, 그대에게.</span></p>
+      <div class="hero-now"><div class="bars" id="bars" role="group" aria-label="보고 싶은 인물 선택"></div><button id="hero-name" type="button"></button><span id="hero-role"></span></div>
+    </div>
+  </section>
+
+  <section class="basara" id="basara" aria-label="바사라란">
+    <div class="wrap"><figure class="basara-figure">
+      <button class="zoom" data-lb-single="BASARA" aria-label="바사라 소개 그림 크게 보기"><img data-src="BASARA" alt="바사라 소개 그림 — 붉은 옷의 무장이 불타는 성을 바라보고 있다." loading="lazy" width="1623" height="832"></button>
+      <div class="basara-copy"><h2>바사라</h2><p>신분도, 예법도, 법도도 비웃는다.</p><p>원하는 것은 수단을 가리지 않고 취한다.</p><p>땅도, 명물도, 사람도 전리품이다.</p></div>
+      <figcaption class="basara-hint">그림을 누르면 원본 전체를 볼 수 있어요.</figcaption>
+    </figure></div>
+  </section>
+
+  <section class="sec" id="prologue">
+    <div class="wrap">
+      <header class="sec-head"><span class="seal" aria-hidden="true">序幕</span><h2>프롤로그</h2></header>
+      <div class="comic" id="comic">
+        <div id="comic-first"></div>
+        <div class="comic-fade"></div>
+        <div class="comic-rest" id="comic-rest"></div>
+        <button class="more-btn" id="more-btn">이어서 보기<small id="more-count"></small></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="world">
+    <div class="wrap">
+      <header class="sec-head"><h2>세계관</h2></header>
+      <aside class="world-key" aria-label="이야기의 핵심">
+        <h3>당신은 쇼군의 유일한 후계</h3>
+        <p>당신을 차지하면 ‘나라를 다스릴 자격’을 내세울 수 있다.</p>
+      </aside>
+      <div class="power-map" role="group" aria-label="쇼군과 세 가문의 권력 관계도">
+        <div class="power-ruler">
+          <span class="power-ruler-symbol" id="power-ruler-symbol" aria-hidden="true"></span>
+          <div><small>무사들의 최고 지도자</small><h3>쇼군</h3><span class="power-ruler-status">현재는 실권을 잃음</span></div>
+        </div>
+        <div class="power-bridge"><p><b>지역 영주(다이묘)</b><small>본래 쇼군 아래 · 지금은 서로 경쟁</small></p></div>
+        <div class="power-houses" id="power-houses"></div>
+        <p class="power-legend"><span aria-hidden="true">┄</span> 본래의 상하 관계</p>
+      </div>
+      <div class="power-others" aria-label="교토와 무소속 인물">
+        <div><h3>교토의 인물</h3><p><strong>소마</strong> · 당신의 호위 <span class="power-other-divider" aria-hidden="true">/</span> <strong>하쿠레이</strong> · 귀족 후계</p></div>
+        <div><h3>무소속</h3><p><strong>카라스</strong> · 암살자 <span class="power-other-divider" aria-hidden="true">/</span> <strong>엔쿄</strong> · 승려·책사 <span class="power-other-divider" aria-hidden="true">/</span> <strong>유겐</strong> · 배우·정보상</p></div>
+      </div>
+
+      <details class="world-more"><summary>세계관 더 알아보기</summary><div class="world-more-content">
+      <p class="lead">14년 전, 쇼군가의 내분으로 교토가 불탔다. 그날 이후 쇼군은 이름만 남았고, 다이묘들이 각지에서 할거한다. 선대부터 이어진 세 가문이 천하를 두고 맞서며, 무패의 오슈가 한발 앞서 있다.</p>
+      <div class="terms">
+        <article class="term"><span class="term-k" aria-hidden="true">将軍</span><div><h3>쇼군</h3>
+          <p>무사들의 정점에 선 자. 무가 정권의 우두머리로, 본래 천하의 무사들을 다스린다.</p>
+          <p>14년 전 교토가 불탄 뒤 쇼군은 이름만 남았고, 지금은 다이묘들의 계략으로 죽어 가고 있다. 그 피를 이은 단 하나의 후계가 당신이다. 후계를 쥐는 자가 명분을 얻고, 다음 천하인이 된다.</p></div></article>
+        <article class="term"><span class="term-k" aria-hidden="true">大名</span><div><h3>다이묘</h3>
+          <p>각 지방을 다스리는 무장 영주. 자기 땅과 성, 군대를 거느린다.</p>
+          <p>쇼군의 권위가 무너진 지금, 다이묘들은 서로의 땅을 빼앗으며 천하를 다툰다. 그중 가장 강한 세 가문이 간토의 아카츠키가, 오슈의 히무로가, 규슈의 나기가다.</p></div></article>
+      </div>
+      <h3 class="world-factions-title">세 가문의 배경</h3>
+      <div class="houses" id="houses"></div>
+      <div class="duo">
+        <div class="panel"><h3>교토</h3><p>쇼군가는 무너지는 중이다. 다이묘들의 계략으로 쇼군이 죽어 간다. 조정과 공가는 무력 없이 명분만 쥔 채 다이묘들에게 관위를 팔아 연명하고, 그 중심에 쿠조가가 있다.</p></div>
+        <div class="panel"><h3>난세</h3><p>세 가문 외에도 군소 다이묘가 난립하고, 그들 역시 당신을 노린다. 다이묘 간 충돌, 국경 교전, 기습, 성 함락이 일상이다. 길에서도 마을에서도 성에서도 전화에 휘말릴 수 있다.</p></div>
+      </div>
+      <div class="heir">
+        <span class="heir-crest" data-crest="shogunate" aria-hidden="true"></span>
+        <h3>당신은 쇼군의 유일한 후계</h3>
+        <p>다음 천하인이 될 열쇠. 권력자들 사이에선 알려진 존재지만, 그 얼굴을 아는 자는 드물다. 당신을 손에 넣는 자가 천하를 손에 넣는다.</p>
+      </div>
+      </div></details>
+      <div class="world-next"><a href="#characters">등장인물 만나기 <span aria-hidden="true">→</span></a></div>
+    </div>
+  </section>
+
+  <section class="sec ink" id="characters">
+    <div class="wrap">
+      <header class="sec-head"><span class="seal" aria-hidden="true">群雄</span><div><h2>등장인물</h2><p>세 가문, 교토, 무소속의 인물들. 카드를 누르면 자세히 볼 수 있어요.</p></div></header>
+      <div class="filters" id="filters" role="group" aria-label="진영별로 보기"></div>
+      <ul class="roster" id="roster"></ul>
+    </div>
+  </section>
+
+  <section class="sec ink" id="map">
+    <div class="wrap">
+      <header class="sec-head"><span class="seal" aria-hidden="true">絵図</span><h2>지도</h2></header>
+      <figure class="map-fig">
+        <div class="map-canvas">
+          <img data-src="MAP" alt="바사라의 꽃 세계 지도 — 북진성, 시라카와 관문, 홍련성, 교토, 해문관" loading="lazy" width="1536" height="1024">
+          <div id="map-pins" role="group" aria-label="지도의 장소"></div>
+        </div>
+        <figcaption class="map-caption"><span>빛나는 장소를 누르면 설명을 볼 수 있어요.</span><button type="button" class="map-expand" data-lb-single="MAP">지도 크게 보기</button></figcaption>
+      </figure>
+      <div class="map-keys" id="map-keys" role="group" aria-label="장소 이름으로 선택"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="guide">
+    <div class="wrap">
+      <header class="sec-head"><span class="seal" aria-hidden="true">心得</span><h2>관계 이모지</h2></header>
+      <p class="sub-p">인물마다 관계는 하나뿐이고, 사건과 언행으로만 바뀌어요. 당신도, 그들도 죽을 수 있어요.</p>
+      <ul class="rels" id="rels"></ul>
+    </div>
+  </section>
+
+  <section class="sec" id="persona">
+    <div class="persona-wrap">
+      <header class="persona-heading"><span>RANDOM · 당신의 설정</span><h2>나의 페르소나</h2><p>후계자의 목표와 주 무기, 자라온 배경부터 소문과 약점까지 뽑아보세요.</p></header>
+      <form id="persona-form">
+        <div class="persona-fields">
+          <label for="persona-input-name">이름 · 선택 입력<input id="persona-input-name" name="persona-name" type="text" maxlength="20" placeholder="원하는 이름 · 비워도 돼요" autocomplete="off"></label>
+          <label for="persona-weapon">주 무기<select id="persona-weapon" name="persona-weapon"><option value="any">무작위</option></select></label>
+        </div>
+        <div class="persona-trigger"><button type="submit" class="persona-primary" id="persona-generate" aria-haspopup="dialog">설정 뽑기</button></div>
+      </form>
+      <p id="persona-announcement" class="sr" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section class="sec ink begin" id="begin">
+    <div class="wrap">
+      <span class="begin-crest" data-crest="shogunate" aria-hidden="true"></span>
+      <h2><span>그대를 가지는 자가,</span><span>천하를 손에 넣는다.</span></h2>
+      <a class="crack-btn" data-crack href="#begin">크랙에서 시작하기</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <a class="brand" href="#top">婆娑羅の花</a>
+  <p>크랙 캐릭터 챗 「바사라의 꽃」</p>
+  <p>BGM 「バサラの花」</p>
+</footer>
+
+<div class="fabs">
+  <button class="fab" id="to-top" aria-label="맨 위로" hidden>↑</button>
+  <button class="fab" id="bgm-btn" aria-label="음악 켜기" aria-pressed="false" hidden>♪</button>
+</div>
+
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="m-box" role="dialog" aria-modal="true" aria-labelledby="m-name">
+    <div class="m-img" id="m-img"></div>
+    <div class="m-info" id="m-info"></div>
+    <button class="m-close" id="m-close" aria-label="닫기">✕</button>
+    <button class="m-nav m-prev" id="m-prev" aria-label="이전 인물">‹</button>
+    <button class="m-nav m-next" id="m-next" aria-label="다음 인물">›</button>
+  </div>
+</div>
+
+<dialog class="persona-dialog" id="persona-dialog" aria-labelledby="persona-dialog-title">
+  <div class="persona-dialog-bar"><span>당신의 인물 기록</span><button type="button" class="persona-close" id="persona-close" aria-label="페르소나 닫기">✕</button></div>
+  <article class="persona-document">
+    <header class="persona-doc-head"><span class="persona-emblem" id="persona-emblem" aria-hidden="true"></span><div><p>바사라의 꽃</p><h3 id="persona-dialog-title">후계자의 기록</h3></div><span class="persona-stamp" aria-hidden="true">후계</span></header>
+    <div class="persona-identity"><h4 id="persona-result-goal"></h4><p id="persona-result-meta"></p><p id="persona-result-identity"></p><span class="persona-type" id="persona-result-type"></span></div>
+    <p class="persona-summary" id="persona-result-summary"></p>
+    <dl class="persona-details" id="persona-result-fields"></dl>
+  </article>
+  <div class="persona-actions"><div class="persona-action-row"><button type="button" class="persona-secondary" id="persona-reroll">다시 뽑기</button><button type="button" class="persona-primary" id="persona-copy">설정 복사</button></div><p>마음에 드는 설정만 골라 자유롭게 바꿔도 좋아요.</p><p id="persona-copy-status" role="status" aria-live="polite"></p><textarea class="persona-copy-text" id="persona-copy-text" aria-label="복사할 페르소나 설정" readonly hidden></textarea></div>
+</dialog>
+
+<dialog class="place-dialog" id="place-dialog" aria-labelledby="place-faction-title place-title">
+  <div class="place-dialog-bar"><button type="button" class="place-close" id="place-close" aria-label="장소 설명 닫기">✕</button></div>
+  <div class="place-body"><header class="place-faction" id="place-faction"></header><h3 id="place-title"></h3><div class="place-switches" id="place-switches" role="group" aria-label="교토의 장소 선택"></div><div id="place-content"></div></div>
+</dialog>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="크게 보기" tabindex="-1">
+  <img id="lb-img" alt="">
+  <button type="button" class="lb-zoom" id="lb-zoom" aria-pressed="false" aria-controls="lb-img" hidden>원본 크기로 확대</button>
+  <button class="lb-close" id="lb-close" aria-label="닫기">✕</button>
+  <button class="lb-nav lb-prev" id="lb-prev" aria-label="이전">‹</button>
+  <button class="lb-nav lb-next" id="lb-next" aria-label="다음">›</button>
+  <div class="lb-count" id="lb-count"></div>
+</div>
+
+<script>
+/* ───────── 설정: 여기만 고치면 돼요 ───────── */
+const CONFIG = {
+  CRACK_URL: '',                         // 크랙 봇 주소를 따옴표 안에 넣으면 "크랙에서 시작" 버튼이 크랙으로 연결돼요
+  CDN: 'https://raw.githubusercontent.com/oiris3355-dev/basara/main/',
+  BGM: 'バサラの花 (1).mp3',
+  TITLE: 'title.png',
+  STAGE: '무대.jpeg',
+  BASARA: 'https://raw.githubusercontent.com/oiris3355-dev/basara/main/%EB%B0%94%EC%82%AC%EB%9D%BC%EC%84%A4%EB%AA%85.png',
+  MAP: 'map.png',
+  PROLOGUE: [
+    'https://raw.githubusercontent.com/oiris3355-dev/basara/refs/heads/main/web1.png',
+    'https://raw.githubusercontent.com/oiris3355-dev/basara/refs/heads/main/web2.jpeg',
+    'https://raw.githubusercontent.com/oiris3355-dev/basara/refs/heads/main/web3..png',
+    'https://raw.githubusercontent.com/oiris3355-dev/basara/refs/heads/main/web4.jpg',
+    'https://raw.githubusercontent.com/oiris3355-dev/basara/refs/heads/main/web.jpg',
+    'https://raw.githubusercontent.com/oiris3355-dev/basara/refs/heads/main/web6.jpg',
+    'https://raw.githubusercontent.com/oiris3355-dev/basara/refs/heads/main/web7.png',
+    'https://raw.githubusercontent.com/oiris3355-dev/basara/refs/heads/main/web8_.png',
+    'https://raw.githubusercontent.com/oiris3355-dev/basara/refs/heads/main/web9.png',
+    'https://raw.githubusercontent.com/oiris3355-dev/basara/refs/heads/main/web10.png'
+  ],
+  PROLOGUE_FIRST: 3,                     // 처음에 펼쳐 둘 장 수
+  HERO: ['ren','seitora','isana','soma','hakurei','karasu','enkyo','yugen'],          // 폰(세로 화면) 첫 화면: 인물 방향을 보정한 썸네일
+  HERO_FOCUS: {ren:'66%', seitora:'70%', isana:'74%', soma:'85%', hakurei:'75%', karasu:'83%', enkyo:'83%', yugen:'94%'}, // 폰 화면의 얼굴 위치
+  HERO_WIDE: ['ren','shizuma','seitora','gon','isana','roku','soma','hakurei','karasu','enkyo','yugen']  // PC(가로 화면) 첫 화면: hero 그림
+};
+
+const FACTIONS = {
+  akatsuki:{name:'아카츠키가', region:'간토', mark:'暁', color:'#b8322a'},
+  himuro:  {name:'히무로가', region:'오슈', mark:'氷', color:'#a7b4c2'},
+  nagi:    {name:'나기가', region:'규슈', mark:'凪', color:'#2f9a95'},
+  kyoto:   {name:'교토', region:'쇼군가 · 공가', mark:'京', color:'#c8a256'},
+  none:    {name:'무소속', region:'', mark:'無', color:'#8a8079'}
+};
+
+const FACTION_SYMBOLS = {
+  akatsuki: '아카츠키가문장.png',
+  himuro: '히무로가문장.png',
+  nagi: '나기가문장.png',
+  shogunate: '쇼군가문장.png'
+};
+
+/* hero: PC 첫 화면 그림 / img: 카드 그림 파일명 / rotate: 누운 썸네일이면 true, 세로 그림이면 false / pos: 얼굴 위치(누운 원본 기준 세로 %)
+   gallery: ['파일명.png', ...] 넣으면 상세 창에 갤러리가 생겨요 */
+const CHARACTERS = [
+  {id:'ren', name:'아카츠키 렌', kanji:'暁蓮', ph:'蓮', faction:'akatsuki', role:'간토 다이묘', age:'31세 ♂', weapon:'카타나',
+   hero:'렌_전투.jpg', img:'렌.jpeg', rotate:true, pos:'58%', gallery:[],
+   looks:'6척 2촌 (188cm) / 부스스한 빨간 짧은 머리 / 파란 눈 / 야성적인 근육질 / 금실 자수 진홍 하오리, 앞섶을 풀어헤친 검은 기모노, 검은 하카마, 붉은 끈 귀걸이',
+   persona:'갖고 싶으면 가지고, 법도와 체면은 비웃으며, 질리면 미련 없이 버린다. 약탈도 기습도, 적장의 목을 선물로 보내는 일도 전부 웃으며 한다. 지루하면 칼자루를 손가락으로 두드리고, 난간이나 의자에 한쪽 다리를 걸치고 앉으며, 마음에 드는 건 위아래로 훑어본다. 느긋한 반말에 비꼬는 웃음, 기분 따라 상대 별명을 갈아치운다. 좋아하는 것은 강한 상대, 예측 못한 것, 독한 술. 싫어하는 것은 지루함, 예법과 격식, 아첨.',
+   intro:'아카츠키가의 차남. 오로지 능력과 욕망으로 가주 자리에 오른 간토의 다이묘. 선두에서 직접 베어 들어가는 빠르고 거친 검술로, 무장 중 유일하게 세이토라와 맞대결이 가능하다. 싸울 때만 눈이 살아난다. 당신을 난세에서 가질 수 있는 가장 가치 있는 재보로 본다.',
+   secret:'인정받아도 빈 것 같다. 인정받아야만 사는 삶에 공허를 느낀다.'},
+  {id:'seitora', name:'히무로 세이토라', kanji:'氷室征虎', ph:'征虎', faction:'himuro', role:'오슈 다이묘', age:'33세 ♂', weapon:'창',
+   hero:'세이토라_전투.jpg', img:'세이토라.jpeg', rotate:true, pos:'58%', gallery:[],
+   looks:'6척 5촌 (197cm) / 흐트러진 은회색 짧은 머리, 눈가를 덮는 긴 앞머리 / 남색 눈 / 거구의 미남, 무표정 / 흑철 갑주, 흰 진바오리',
+   persona:'원하는 땅은 반드시 취하고, 항복하지 않은 성은 몰살한다. 약속은 반드시 지키고 속임수를 경멸한다. 상대 눈을 똑바로 보며 말하고, 갑주 끈은 직접 고쳐 매며, 들어선 곳의 지형과 공간부터 파악한다. 짧은 단문의 사무적인 말투, 감정을 드러내지 않는다. 좋아하는 것은 규율, 명마, 설원. 싫어하는 것은 속임수, 사치, 변명.',
+   intro:'히무로가의 적장자. 선대의 가법을 그대로 이어받은 무패의 오슈 다이묘이자 전국 최강의 무장. 기마단을 한 몸처럼 움직여 압도적인 무게로 밀어붙이고, 퇴로까지 계산한다. 당신에게는 관심이 없다. 천하는 외도가 아닌 자신의 무력으로 얻어야 하므로.',
+   secret:'가법 외에 자기가 무엇을 원하는지 모른다.'},
+  {id:'isana', name:'나기 이사나', kanji:'凪勇魚', ph:'勇魚', faction:'nagi', role:'규슈 다이묘', age:'28세 ♂', weapon:'남만검 · 단총',
+   hero:'이사나_단총을겨눔.jpg', img:'이사나.jpeg', rotate:true, pos:'60%', gallery:[],
+   looks:'6척 3촌 (191cm) / 흐트러진 금발 / 녹안 / 그을린 피부, 날렵한 근육질 / 맨가슴에 사라시, 어깨에 걸친 남색 남만 코트, 물결무늬 하카마',
+   persona:'모든 것에 값을 매기고, 사람도 사고판다. 매수, 밀수, 인질 거래를 서슴지 않으며, 장난스럽지만 이득 앞에선 냉정하다. 금화를 손가락 사이로 굴리고, 처음 본 상대는 값을 매기듯 훑는다. 이국 단어를 섞은 능청스러운 반말. 좋아하는 것은 진귀한 것, 바다, 흥정. 싫어하는 것은 육지 귀족의 멸시, 손해, 묶이는 것.',
+   intro:'해적 출신. 서양과 거래를 트며 나기가를 일으킨 규슈의 다이묘. 해상전을 지휘하며, 정면 승부는 피하고 화약과 기습, 배 위 난전으로 싸운다. 질 것 같으면 미련 없이 물러난다. 당신을 가장 가치 있는 것으로 보고 카라스에게 납치를 의뢰했다.',
+   secret:'나기가는 한 번 멸문한 가문이다. 이사나가 바닥부터 다시 일으켰다.'},
+  {id:'soma', name:'시라누이 소마', kanji:'不知火蒼真', ph:'蒼真', faction:'kyoto', role:'쇼군가 근위대장', age:'26세 ♂', weapon:'카타나 · 와키자시',
+   hero:'소마_전투.jpg', img:'소마.jpeg', rotate:true, pos:'64%', gallery:[],
+   looks:'6척 (182cm) / 단정히 묶은 흑발 / 회색 눈 / 곧은 자세 / 쇼군가 문장이 든 검은 기모노',
+   persona:'충의를 위해선 사람도 베는 금욕적인 무사. 이사나와 렌을 무법자로 혐오한다. 칼집에 손을 얹은 채 주변을 살피고, 당신과 있을 땐 반걸음 뒤에 선다. 정중하고 딱딱한 존댓말. 좋아하는 것은 질서, 정돈된 것. 싫어하는 것은 무법, 하극상, 배신.',
+   intro:'대대로 쇼군가를 지켜 온 시라누이가의 무사. 쇼군가 근위대장이자 마지막 충신. 지킬 자를 등 뒤에 두고 한 발도 물러서지 않으며, 군더더기 없는 일격을 쓴다. 어릴 때부터 당신의 호위무사였다. 당신은 그가 지켜야 할 사람이다.',
+   secret:'당신을 지키느라 쇼군을 지키지 못했다는 죄책감.'},
+  {id:'hakurei', name:'쿠조 하쿠레이', kanji:'玖条白嶺', ph:'白嶺', faction:'kyoto', role:'쿠조가 후계', age:'29세 ♂', weapon:'없음 (칼 대신 혀와 붓)',
+   hero:'하쿠레이_노림,겨눔.jpg', img:'하쿠레이.jpeg', rotate:true, pos:'64%', gallery:[],
+   looks:'5척 9촌 (178cm) / 긴 검푸른 머리 / 호박색 눈, 가는 눈매 / 창백한 피부, 옅은 화장 / 연보라 기모노, 겹비단, 쥘부채',
+   persona:'무력 없이 관위와 혼인, 밀고로 판을 짜고, 모두를 장기말로 본다. 쥘부채로 입가를 가리고, 상대의 말끝을 되받아 비튼다. 나긋한 존대 속에 가시가 있다. 좋아하는 것은 와카, 향, 판을 읽는 것. 싫어하는 것은 무식, 피, 무능.',
+   intro:'관위를 팔며 연명하는 쿠조가를 짊어진 후계. 직접 싸우지 않고, 위험하면 남을 앞세운다. 당신을 무능한 쇼군의 무능한 자식으로 보고 혐오한다.',
+   secret:'그 역시 가문을 위해 혼인의 패로 팔려 갈 처지다.'},
+  {id:'karasu', name:'카라스', kanji:'鴉', ph:'鴉', faction:'none', role:'시노비', age:'20대 추정 ♂', weapon:'쿠나이 · 쇠사슬낫',
+   hero:'카라스_전투.jpg', img:'카라스.jpeg', rotate:true, pos:'66%', gallery:[],
+   looks:'6척 1촌 (185cm) / 검은 머리 / 날카로운 검은 눈 / 마른 근육질 / 흑의, 복면',
+   persona:'무언무감. 의뢰라면 누구든 죽인다. 늘 등을 벽에 붙이고 서고, 들어서면 출입구부터 확인하며, 먹을 때도 복면을 반만 내린다. 단어 단위로 끊어 말한다. 좋아하는 것은 고요함, 높은 곳. 싫어하는 것은 소란, 명령 없는 상황.',
+   intro:'주인 잃은 시노비. 돈으로 의뢰받아 움직이며, 소리 없이 접근해 급소를 한 번에 노린다. 정면 대결은 피한다. 이사나의 의뢰로 당신을 납치할 임무를 맡았다. 당신에게는 아무 관심이 없다.',
+   secret:'옛 주인이 죽던 날, 명령 없이는 움직이지 못해 지키지 못했다. 의뢰비는 전부 죽은 주인의 가족에게 보낸다.'},
+  {id:'enkyo', name:'엔쿄', kanji:'円鏡', ph:'円鏡', faction:'none', role:'파계승', age:'40대 ♂', weapon:'석장',
+   hero:'엔쿄_기본.jpg', img:'엔쿄.jpeg', rotate:true, pos:'68%', gallery:[],
+   looks:'6척 7촌 (203cm) / 반 꽁지 더벅머리, 수염 / 능글맞은 눈웃음 / 단련된 근육질 / 피 튄 승복, 허리에 술병',
+   persona:'어느 세력에든 붙는 도박꾼. 천하를 판돈으로 본다. 주사위를 굴리고, 염주를 세다 말고 술을 마신다. 느물거리는 반말에 불경한 농담. 좋아하는 것은 술, 도박, 판이 뒤집히는 순간. 싫어하는 것은 설교, 독실한 척.',
+   intro:'하카이뉴도(破戒入道)라 자칭하고 다니는 파계승 책사. 어느 세력에도 붙지 않는다. 싸움을 피하지 않고 근력으로 으깨 버리며, 함정과 이간, 매복 같은 책략도 서슴지 않는다.',
+   secret:'다이묘 간 전쟁에 불탄 절의 생존자. 판을 흔드는 건 복수다.'},
+  {id:'yugen', name:'츠키카게 유겐', kanji:'月影幽玄', ph:'幽玄', faction:'none', role:'노 배우', age:'23세 ♂ (여장남자)', weapon:'부채에 숨긴 암기',
+   hero:'유겐_무대에서공연.jpg', img:'유겐.jpeg', rotate:true, pos:'66%', gallery:[],
+   looks:'5척 8촌 (175cm) / 긴 검보라색 머리 / 푸른 눈 / 중성적인 미형, 흰 피부 / 늘 지니고 다니는 무대 가면',
+   persona:'모든 군웅에게 정보를 판다. 웃음 뒤에 진심이 없다. 가면을 손에서 놓지 않고, 말하지 않을 때는 콧노래를 부른다. 연극조의 존대. 좋아하는 것은 무대, 비밀, 남의 속내. 싫어하는 것은 진심을 들키는 것.',
+   intro:'노 배우이자 정보상, 여장남자. 정면 대결은 하지 않고 빈틈에 한 번 찌르고 사라진다. 당신을 재미있는 구경거리로 본다.',
+   secret:'교토 명문 쥬몬지가(十文字家)의 사생아. 난세를 부르는 높은 신분들을 혐오한다.'},
+  {id:'shizuma', name:'미카게 시즈마', kanji:'御影静馬', ph:'静馬', faction:'akatsuki', role:'아카츠키가 책사', age:'33세 ♂', weapon:'와키자시',
+   hero:'시즈마_전투.jpg', img:'시즈마_기본.jpg', rotate:false, pos:'', gallery:[],
+   looks:'5척 9촌 (180cm) / 바짝 넘긴 단정한 흑발 / 검붉은 눈, 가는 눈매 / 마른 체형 / 검은 기모노, 검붉은 하오리, 검은 하카마',
+   persona:'냉정하고 계산적이며, 감정보다 효율을 따른다. 렌의 변덕을 제어할 수 있는 몇 안 되는 사람. 손가락으로 셈을 하고, 렌의 명령은 한 번 되물어 확인한다. 낮고 건조한 존댓말, 렌에게만 반말을 섞는다. 좋아하는 것은 정확한 보고, 조용한 방. 싫어하는 것은 즉흥, 낭비.',
+   intro:'렌의 부관 겸 책사. 직접 싸우기보다 지휘하며, 렌이 벌인 판을 뒷수습한다. 퇴로와 보급, 첩보를 맡는다.',
+   secret:'렌이 가주가 되던 밤, 장남을 직접 처리한 것은 시즈마였다.'},
+  {id:'gon', name:'오니즈카 곤', kanji:'鬼塚厳', ph:'厳', faction:'himuro', role:'히무로가 선봉장', age:'28세 ♂', weapon:'대태도',
+   hero:'곤_전투.jpg', img:'곤_기본.jpg', rotate:false, pos:'', gallery:[],
+   looks:'6척 6촌 (200cm) / 짧게 깎은 머리 / 갈색 눈, 오른쪽 눈 안대 / 거구, 얼굴 곳곳의 흉터 / 호탕한 웃음',
+   persona:'세이토라를 맹신하며, 주군의 명이라면 무엇이든 한다. 주군을 모욕하는 자에겐 거칠고 무례하다. 세이토라 뒤에서 주변을 노려보고, 주군의 말엔 큰 소리로 대답한다. 우렁찬 목소리의 기본 존대, 주군을 모욕하는 자에겐 반말. 좋아하는 것은 세이토라, 술, 힘겨루기. 싫어하는 것은 주군을 모욕하는 자.',
+   intro:'세이토라의 부관 겸 선봉장. 주군 앞을 막고 가장 먼저 돌격하며, 맨몸으로도 싸운다.',
+   secret:'세이토라의 손에 구해진 장수. 주군을 잃으면 살 이유가 없다.'},
+  {id:'roku', name:'사메지마 로쿠', kanji:'鮫島六', ph:'六', faction:'nagi', role:'나기가 부관', age:'34세 ♂', weapon:'갈고리 · 단검',
+   hero:'로쿠_부상.jpg', img:'로쿠_기본.jpg', rotate:false, pos:'', gallery:[],
+   looks:'5척 9촌 (179cm) / 묶은 초록 머리, 머리띠 / 갈색 눈 / 볕에 탄 피부 / 쪽빛 기모노, 걷은 소매',
+   persona:'능글맞은 의리파. 돈보다 사람이며, 이사나에게 유일하게 직언한다. 이사나를 이름으로 막 부르고, 밧줄 매듭을 만지작거린다. 거친 반말, 이사나와는 농담 섞어 티격태격한다. 좋아하는 것은 바다, 술, 이사나와의 내기. 싫어하는 것은 육지, 배신.',
+   intro:'해적 시절부터 이사나의 절친이자 부관. 배 위에서 날렵하게 싸우며 이사나의 등을 맡는다.',
+   secret:'멸문한 나기가의 과거를 아는 유일한 사람.'}
+];
+
+/* 인물 소개: 기본은 핵심 요약, 긴 설정은 접어서 표시 */
+const CHARACTER_SUMMARIES = {
+  "ren": {
+    "looks": [
+      {
+        "title": "붉은 머리 · 파란 눈",
+        "text": "188cm. 야성적인 근육질의 체격."
+      },
+      {
+        "title": "진홍 하오리",
+        "text": "풀어헤친 검은 기모노와 붉은 끈 귀걸이."
+      }
+    ],
+    "persona": [
+      {
+        "title": "거침없는 약탈자",
+        "text": "원하면 빼앗고, 질리면 버린다. 법도와 체면을 비웃는다."
+      },
+      {
+        "title": "느긋한 반말",
+        "text": "비꼬듯 웃으며, 기분에 따라 상대의 별명을 바꾼다."
+      },
+      {
+        "title": "취향",
+        "text": "좋아함: 강한 상대·독한 술 / 싫어함: 지루함·격식·아첨"
+      }
+    ],
+    "intro": [
+      {
+        "title": "실력으로 오른 가주",
+        "text": "아카츠키가의 차남. 세이토라와 맞설 수 있는 무장."
+      },
+      {
+        "title": "당신은 최고의 재보",
+        "text": "난세에서 가질 수 있는 가장 가치 있는 존재로 본다."
+      }
+    ]
+  },
+  "seitora": {
+    "looks": [
+      {
+        "title": "은회색 머리 · 남색 눈",
+        "text": "197cm. 거구의 미남, 늘 무표정하다."
+      },
+      {
+        "title": "흑철 갑주",
+        "text": "흰 진바오리와 눈가를 덮는 긴 앞머리."
+      }
+    ],
+    "persona": [
+      {
+        "title": "냉혹한 원칙주의자",
+        "text": "원하는 땅은 반드시 취한다. 약속을 지키고 속임수를 경멸한다."
+      },
+      {
+        "title": "짧고 사무적인 말투",
+        "text": "감정을 드러내지 않고, 상대와 지형부터 살핀다."
+      },
+      {
+        "title": "취향",
+        "text": "좋아함: 규율·명마·설원 / 싫어함: 속임수·사치·변명"
+      }
+    ],
+    "intro": [
+      {
+        "title": "무패의 오슈 다이묘",
+        "text": "히무로가의 적장자. 기마단을 이끄는 전국 최강의 무장."
+      },
+      {
+        "title": "당신에게는 무관심",
+        "text": "후계의 명분보다 자신의 무력으로 천하를 얻으려 한다."
+      }
+    ]
+  },
+  "isana": {
+    "looks": [
+      {
+        "title": "금발 · 녹안",
+        "text": "191cm. 그을린 피부와 날렵한 근육질."
+      },
+      {
+        "title": "남색 남만 코트",
+        "text": "맨가슴의 사라시와 물결무늬 하카마."
+      }
+    ],
+    "persona": [
+      {
+        "title": "이득에 냉정한 거래꾼",
+        "text": "사람에게도 값을 매긴다. 매수·밀수·인질 거래를 서슴지 않는다."
+      },
+      {
+        "title": "능청스러운 반말",
+        "text": "이국 단어를 섞고, 금화를 손가락 사이로 굴린다."
+      },
+      {
+        "title": "취향",
+        "text": "좋아함: 진귀한 것·바다·흥정 / 싫어함: 손해·구속·귀족의 멸시"
+      }
+    ],
+    "intro": [
+      {
+        "title": "해적 출신 다이묘",
+        "text": "서양과 거래해 나기가를 세웠다. 화약과 기습에 능하다."
+      },
+      {
+        "title": "당신은 가장 값진 존재",
+        "text": "당신을 차지하려고 카라스에게 납치를 의뢰했다."
+      }
+    ]
+  },
+  "soma": {
+    "looks": [
+      {
+        "title": "단정한 무사",
+        "text": "182cm. 묶은 흑발과 회색 눈, 곧은 자세."
+      },
+      {
+        "title": "복장",
+        "text": "쇼군가 문장이 새겨진 검은 기모노."
+      }
+    ],
+    "persona": [
+      {
+        "title": "충의와 금욕",
+        "text": "충의를 위해 칼을 드는 무사. 무법자를 혐오한다."
+      },
+      {
+        "title": "말투 · 습관",
+        "text": "딱딱한 존댓말. 당신의 반걸음 뒤에서 경계한다."
+      },
+      {
+        "title": "취향",
+        "text": "좋아함: 질서·정돈 / 싫어함: 무법·하극상·배신"
+      }
+    ],
+    "intro": [
+      {
+        "title": "마지막 충신",
+        "text": "쇼군가 근위대장. 물러서지 않고 일격으로 싸운다."
+      },
+      {
+        "title": "당신의 호위",
+        "text": "어릴 때부터 당신을 지켜 온 호위무사."
+      }
+    ]
+  },
+  "hakurei": {
+    "looks": [
+      {
+        "title": "창백한 인상",
+        "text": "178cm. 긴 검푸른 머리와 호박색 눈, 옅은 화장."
+      },
+      {
+        "title": "복장",
+        "text": "연보라 기모노와 겹비단, 손에는 쥘부채."
+      }
+    ],
+    "persona": [
+      {
+        "title": "사람도 장기말",
+        "text": "관위·혼인·밀고로 판을 짜고 모두를 이용한다."
+      },
+      {
+        "title": "말투 · 습관",
+        "text": "가시 돋친 나긋한 존대. 부채로 입가를 가린다."
+      },
+      {
+        "title": "취향",
+        "text": "좋아함: 와카·향·판 읽기 / 싫어함: 무식·피·무능"
+      }
+    ],
+    "intro": [
+      {
+        "title": "쿠조가 후계",
+        "text": "관위를 팔아 가문을 지탱하며 직접 싸우지 않는다."
+      },
+      {
+        "title": "당신을 혐오",
+        "text": "당신을 무능한 쇼군의 무능한 자식으로 여긴다."
+      }
+    ]
+  },
+  "karasu": {
+    "looks": [
+      {
+        "title": "날카로운 시노비",
+        "text": "185cm. 흑발과 검은 눈, 마른 근육질."
+      },
+      {
+        "title": "복장",
+        "text": "검은 옷과 복면으로 모습을 감춘다."
+      }
+    ],
+    "persona": [
+      {
+        "title": "무언무감",
+        "text": "감정을 드러내지 않고 의뢰라면 누구든 죽인다."
+      },
+      {
+        "title": "말투 · 습관",
+        "text": "단어로 끊어 말한다. 벽에 등을 대고 출입구를 확인한다."
+      },
+      {
+        "title": "취향",
+        "text": "좋아함: 고요함·높은 곳 / 싫어함: 소란·명령 없는 상황"
+      }
+    ],
+    "intro": [
+      {
+        "title": "주인 잃은 칼",
+        "text": "돈으로 움직이는 시노비. 은밀히 접근해 급소를 노린다."
+      },
+      {
+        "title": "당신은 임무",
+        "text": "이사나의 납치 의뢰를 맡았으며 당신에게 관심 없다."
+      }
+    ]
+  },
+  "enkyo": {
+    "looks": [
+      {
+        "title": "거구의 파계승",
+        "text": "203cm. 반 꽁지 더벅머리와 수염, 단련된 몸."
+      },
+      {
+        "title": "복장",
+        "text": "피 튄 승복을 입고 허리에 술병을 찬다."
+      }
+    ],
+    "persona": [
+      {
+        "title": "천하도 판돈",
+        "text": "판이 뒤집히는 순간을 즐기는 도박꾼."
+      },
+      {
+        "title": "말투 · 습관",
+        "text": "느물거리는 반말과 불경한 농담. 주사위를 굴린다."
+      },
+      {
+        "title": "취향",
+        "text": "좋아함: 술·도박·판 뒤집기 / 싫어함: 설교·독실한 척"
+      }
+    ],
+    "intro": [
+      {
+        "title": "거친 책략",
+        "text": "파계승 책사. 근력과 함정·이간·매복으로 싸운다."
+      },
+      {
+        "title": "소속",
+        "text": "어느 세력에도 소속되지 않는다."
+      }
+    ]
+  },
+  "yugen": {
+    "looks": [
+      {
+        "title": "중성적 미형",
+        "text": "175cm. 긴 검보라 머리, 푸른 눈과 흰 피부."
+      },
+      {
+        "title": "무대 가면",
+        "text": "늘 무대 가면을 지니고 다닌다."
+      }
+    ],
+    "persona": [
+      {
+        "title": "웃음 뒤의 비밀",
+        "text": "군웅에게 정보를 팔며, 진심은 감춘다."
+      },
+      {
+        "title": "말투 · 습관",
+        "text": "연극조의 존대. 가면을 쥐고 콧노래를 부른다."
+      },
+      {
+        "title": "취향",
+        "text": "좋아함: 무대·비밀·남의 속내 / 싫어함: 진심이 들키는 것"
+      }
+    ],
+    "intro": [
+      {
+        "title": "배우 · 정보상",
+        "text": "여장 노 배우. 빈틈을 찌르고 사라진다."
+      },
+      {
+        "title": "당신을 향한 시선",
+        "text": "당신을 재미있는 구경거리로 본다."
+      }
+    ]
+  },
+  "shizuma": {
+    "looks": [
+      {
+        "title": "단정한 인상",
+        "text": "180cm의 마른 체형. 넘긴 흑발과 검붉은 눈."
+      },
+      {
+        "title": "검은 옷차림",
+        "text": "검은 기모노·하카마에 검붉은 하오리."
+      }
+    ],
+    "persona": [
+      {
+        "title": "감정보다 효율",
+        "text": "냉정하고 계산적이며, 렌의 변덕을 제어한다."
+      },
+      {
+        "title": "말투 · 습관",
+        "text": "건조한 존대. 렌의 명령은 되물어 확인한다."
+      },
+      {
+        "title": "취향",
+        "text": "좋아함: 정확한 보고·조용한 방 / 싫어함: 즉흥·낭비"
+      }
+    ],
+    "intro": [
+      {
+        "title": "부관 · 책사",
+        "text": "직접 싸우기보다 지휘하며 렌의 판을 수습한다."
+      },
+      {
+        "title": "렌의 뒷받침",
+        "text": "퇴로·보급·첩보를 맡아 렌을 보좌한다."
+      }
+    ]
+  },
+  "gon": {
+    "looks": [
+      {
+        "title": "흉터의 거구",
+        "text": "200cm. 짧은 머리와 얼굴 곳곳의 흉터."
+      },
+      {
+        "title": "안대 · 웃음",
+        "text": "갈색 눈, 오른쪽 안대와 호탕한 웃음."
+      }
+    ],
+    "persona": [
+      {
+        "title": "맹목적 충성",
+        "text": "세이토라를 맹신하며, 주군을 모욕하면 거칠어진다."
+      },
+      {
+        "title": "말투 · 습관",
+        "text": "우렁찬 존대. 주군의 말엔 큰 소리로 답한다."
+      },
+      {
+        "title": "취향",
+        "text": "좋아함: 세이토라·술·힘겨루기 / 싫어함: 주군을 모욕하는 자"
+      }
+    ],
+    "intro": [
+      {
+        "title": "부관 · 선봉장",
+        "text": "가장 먼저 돌격하며, 맨몸으로도 싸운다."
+      },
+      {
+        "title": "주군의 방패",
+        "text": "세이토라의 앞을 막고, 어떤 명령이든 따른다."
+      }
+    ]
+  },
+  "roku": {
+    "looks": [
+      {
+        "title": "바다의 사내",
+        "text": "179cm. 묶은 초록 머리, 갈색 눈과 탄 피부."
+      },
+      {
+        "title": "걷어 올린 소매",
+        "text": "머리띠와 쪽빛 기모노, 걷은 소매."
+      }
+    ],
+    "persona": [
+      {
+        "title": "돈보다 사람",
+        "text": "능글맞은 의리파. 이사나에게도 직언한다."
+      },
+      {
+        "title": "말투 · 습관",
+        "text": "거친 반말과 농담. 밧줄 매듭을 만지작거린다."
+      },
+      {
+        "title": "취향",
+        "text": "좋아함: 바다·술·이사나와의 내기 / 싫어함: 육지·배신"
+      }
+    ],
+    "intro": [
+      {
+        "title": "절친 · 부관",
+        "text": "해적 시절부터 이사나와 함께한 절친이자 부관."
+      },
+      {
+        "title": "믿고 맡기는 등",
+        "text": "배 위에서 날렵하게 싸우며 이사나의 등을 맡는다."
+      }
+    ]
+  }
+};
+
+const HOUSES = [
+  {f:'akatsuki', brief:'렌이 이끄는 간토의 가문. 실력을 중시하며 자유로운 분위기다.', text:'뼈대 굵은 명문. 렌이 하극상으로 뒤엎은 뒤 능력 위주로 사람을 쓰며, 자유와 통제가 섞인 가풍이다.', strength:'개개인의 무력', seat:'홍련성', people:'렌 · 시즈마'},
+  {f:'himuro', brief:'세이토라가 이끄는 오슈의 가문. 엄격한 군율과 전통을 지킨다.', text:'뼈대 굵은 전통의 강자. 엄격한 군율과 가법을 지키는 무패의 가문이다.', strength:'통솔력 · 군사력 · 기마단', seat:'북진성', people:'세이토라 · 곤'},
+  {f:'nagi', brief:'이사나가 세운 규슈의 가문. 서양과 교역하며 바다에서 싸운다.', text:'서양과 거래가 트이며 해적 출신 이사나가 일으킨 신흥 가문.', strength:'정보 · 외교 · 정치 · 해상전', seat:'해문관', people:'이사나 · 로쿠'}
+];
+
+const PLACES = [
+  {f:'akatsuki', items:[
+    {name:'홍련성', kanji:'紅蓮城', text:'아카츠키가의 거성. 붉은 옻칠 망루와 금박 장식, 밤낮없는 연회가 이어지고 안뜰 결투가 구경거리다. 성하 마을이 번화하고 유곽이 늘어서 있다.', who:['렌','시즈마']}]},
+  {f:'himuro', items:[
+    {name:'북진성', kanji:'北辰城', text:'오슈 설원 위의 성채, 히무로가의 거성. 검은 돌 성벽에 장식은 없고 눈보라가 친다. 군율이 엄격하고 기마 훈련장과 병영이 있으며, 밤에도 횃불로 경계한다.', who:['세이토라','곤']}]},
+  {f:'nagi', items:[
+    {name:'해문관', kanji:'海門館', text:'규슈 나가사키, 나기가의 거점. 항구에 붙은 저택에 남만 유리창과 이국 가구, 창고마다 밀수품이 쌓여 있다. 부두엔 남만선과 이국 상인.', who:['이사나','로쿠']}]},
+  {f:'kyoto', items:[
+    {name:'쇼군가 저택', kanji:'', text:'교토 중심. 휘황찬란하나 가라앉은 분위기. 금병풍과 빈 방, 시종들은 하나둘 떠나고 소수 근위만 남아 경비가 허술하다.', who:['소마']},
+    {name:'쿠조가 저택', kanji:'', text:'몰락했으나 격식을 지키는 저택. 낡은 침전, 향 냄새, 와카 두루마리. 다이묘의 사자들이 드나들며 관위를 거래한다.', who:['하쿠레이']},
+    {name:'가모가와 강변', kanji:'', text:'가설 노 무대, 노점, 피난민. 낮엔 장터, 밤엔 암거래, 강변엔 처형터. 소문과 정보가 모이는 유겐의 무대.', who:['유겐']}]},
+  {f:'border', items:[
+    {name:'시라카와 관문', kanji:'白河関', text:'간토와 오슈의 국경. 목책과 망루, 버려진 마을, 두 가문의 깃발이 마주 보는 대치 최전선.', who:['렌','시즈마','세이토라','곤']}]}
+];
+
+const RELS = [
+  ['💀','사망','이후 등장하지 않아요'],['🔥','숙적',''],['😡','혐오',''],['🤨','경계 · 의심',''],
+  ['🎯','표적','당신을 손에 넣을 대상으로 노림'],['💎','이용 중',''],['💼','거래',''],['😑','무관심',''],
+  ['🙂','흥미',''],['🗡️','충성','당신을 주인으로 섬김'],['🥀','욕망','당신 자체를 탐함'],['⛓️','집착',''],
+  ['🤍','짝사랑',''],['💓','연인',''],['💔','결별',''],['💍','혼인','']
+];
+
+/* ───────── 아래는 동작 코드 ───────── */
+const BASE = /(^|\.)github\.io$|^localhost$|^127\.0\.0\.1$/.test(location.hostname) ? '' : CONFIG.CDN;
+const url = f => /^https?:\/\//.test(f) ? f : BASE + encodeURIComponent(f);
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const CREST = c => `<svg viewBox="0 0 100 100" aria-hidden="true"><g fill="${c}" stroke="#120d0c" stroke-width="3"><circle cx="50" cy="24" r="20"/><circle cx="74.7" cy="42" r="20"/><circle cx="65.3" cy="71" r="20"/><circle cx="34.7" cy="71" r="20"/><circle cx="25.3" cy="42" r="20"/></g><circle cx="50" cy="50" r="15" fill="#120d0c"/><circle cx="50" cy="50" r="9" fill="${c}"/></svg>`;
+const fc = f => (FACTIONS[f] || {color:'#c8a256'}).color;
+const crestImage = key => `<img class="crest-img" src="${CONFIG.CDN + encodeURIComponent(FACTION_SYMBOLS[key])}" alt="" width="160" height="160" loading="lazy" decoding="async">`;
+const factionIcon = key => FACTION_SYMBOLS[key] ? `<span class="faction-icon" aria-hidden="true">${crestImage(key)}</span>` : `<i aria-hidden="true"></i>`;
+const characterCrest = c => c.id === 'soma' ? 'shogunate' : c.faction;
+document.querySelectorAll('[data-crest]').forEach(el => { el.innerHTML = crestImage(el.dataset.crest); });
+
+/* asset hookups */
+document.querySelectorAll('[data-src]').forEach(el => { el.src = url(CONFIG[el.dataset.src]); });
+document.querySelectorAll('[data-bg]').forEach(el => { el.style.backgroundImage = `url("${url(CONFIG[el.dataset.bg])}")`; });
+document.querySelectorAll('img[data-src="TITLE"]').forEach(img => img.addEventListener('error', () => {
+  const s = document.createElement('div');
+  s.className = img.className; s.setAttribute('role','img'); s.setAttribute('aria-label', img.alt);
+  s.style.cssText += 'writing-mode:vertical-rl;font-family:var(--f-kanji);font-size:min(9svh,64px);line-height:1.15;color:var(--gofun);text-shadow:0 0 3px #000,0 4px 16px #000;height:auto';
+  s.textContent = '婆娑羅の花';
+  img.replaceWith(s);
+}, {once:true}));
+
+/* crack link */
+document.querySelectorAll('[data-crack]').forEach(a => {
+  if (CONFIG.CRACK_URL) { a.href = CONFIG.CRACK_URL; a.target = '_blank'; a.rel = 'noopener'; }
+});
+
+/* bgm */
+const audio = new Audio(); audio.loop = true; audio.preload = 'none'; audio.volume = 0;
+const bgmBtn = $('#bgm-btn');
+let fadeTimer;
+function fadeTo(v, ms){ clearInterval(fadeTimer); const st = audio.volume, t0 = performance.now();
+  fadeTimer = setInterval(() => { const k = Math.min(1, (performance.now()-t0)/ms); audio.volume = st + (v-st)*k; if (k===1) clearInterval(fadeTimer); }, 40); }
+function setBgm(on){ bgmBtn.hidden = false; bgmBtn.setAttribute('aria-pressed', on); bgmBtn.setAttribute('aria-label', on ? '음악 끄기' : '음악 켜기'); bgmBtn.classList.toggle('muted', !on); }
+function playBgm(){ if (!audio.src) audio.src = url(CONFIG.BGM); audio.play().then(() => { fadeTo(.5, 1800); setBgm(true); }).catch(() => setBgm(false)); }
+bgmBtn.addEventListener('click', () => { if (audio.paused) playBgm(); else { audio.pause(); setBgm(false); } });
+
+/* gate */
+const gate = $('#gate'), entryBloom = $('#entry-bloom');
+let entering = false;
+function bloomEntrance(){
+  const w = innerWidth, h = innerHeight, small = w < 600;
+  const petals = Array.from({length:small ? 32 : 48},(_,i)=>{
+    const near = i%11 === 0, far = !near && i%3 === 0;
+    const seed = (i*.61803398875)%1, spread = (i*.38196601125)%1;
+    const x0 = w*(-.24+seed*.5), y0 = h*(.18+spread*.84);
+    const travel = w*(1.05+seed*.25), rise = h*(.22+seed*.2);
+    const size = near ? (small ? 38 : 56)+i%3*5 : far ? 8+i%4*2 : 16+i%5*4;
+    return '<i class="bloom-petal'+(near ? ' is-near' : far ? ' is-far' : '')+'" style="--x0:'+Math.round(x0)+'px;--y0:'+Math.round(y0)+'px;--x1:'+Math.round(x0+travel*.48)+'px;--y1:'+Math.round(y0-rise*.48+Math.sin(i*1.7)*h*.065)+'px;--x2:'+Math.round(x0+travel)+'px;--y2:'+Math.round(y0-rise)+'px;--size:'+size+'px;--duration:'+(1.15+i%4*.035)+'s;--delay:'+(i%7*.025)+'s;--flutter:'+(near ? .45 : .3+i%3*.08)+'s;--alpha:'+(far ? .42 : near ? .78 : .92)+';--r0:'+(i*31%100-70)+'deg;--r1:'+(i*31%100-15)+'deg;--r2:'+(i*31%100+70)+'deg"><span></span></i>';
+  });
+  entryBloom.innerHTML = petals.join(''); entryBloom.hidden = false; entryBloom.classList.add('active');
+}
+function enter(sound){
+  if (entering || !gate.isConnected) return;
+  entering = true; $('#enter').disabled = $('#enter-quiet').disabled = true;
+  if (sound) playBgm(); else setBgm(false);
+  let finished = false, safetyTimer;
+  const done = () => { if(finished) return; finished = true; clearTimeout(safetyTimer); gate.remove(); entryBloom.hidden = true; entryBloom.classList.remove('active'); entryBloom.replaceChildren(); document.body.classList.remove('locked'); startHero(); $('#hero-name')?.focus({preventScroll:true}); };
+  if (reduced) { done(); return; }
+  bloomEntrance();
+  gate.addEventListener('transitionend', e => { if (e.target === gate && e.propertyName === 'transform') done(); });
+  safetyTimer = setTimeout(done,1900);
+  requestAnimationFrame(() => gate.classList.add('lift'));
+}
+$('#enter').addEventListener('click', () => enter(true));
+$('#enter-quiet').addEventListener('click', () => enter(false));
+$('#enter').focus({preventScroll:true});
+
+/* hero slider: PC는 hero 그림, 폰은 인물 방향을 보정한 썸네일 */
+const hero = $('#hero'), track = $('#track'), bars = $('#bars');
+const pick = (ids, key) => ids.map(id => CHARACTERS.find(c => c.id === id)).filter(c => c && c[key]).map(c => ({c, src:c[key], rotate:key === 'img' && c.rotate}));
+const HERO_SETS = { wide: pick(CONFIG.HERO_WIDE, 'hero'), tall: pick(CONFIG.HERO, 'img') };
+const wide = matchMedia('(min-aspect-ratio: 1/1)');
+let heroList = [], hi = 0, heroPos = 1, heroTimer, heroResetTimer, heroStarted = false;
+const heroIndex = i => (i % heroList.length + heroList.length) % heroList.length;
+function heroShow(i){
+  if (!heroList.length) return;
+  const index = heroIndex(i), c = heroList[index].c, nb = $('#hero-name');
+  nb.textContent = c.name; nb.setAttribute('aria-label', c.name + ' 자세히 보기'); $('#hero-role').textContent = c.role;
+  [...bars.children].forEach((b, k) => { b.classList.toggle('on', k === index); b.setAttribute('aria-current', k === index ? 'true' : 'false'); });
+}
+function heroSnap(){
+  clearTimeout(heroResetTimer);
+  heroPos = hi + 1; track.style.transition = 'none'; track.style.transform = `translateX(${-heroPos*100}%)`;
+  void track.offsetWidth;
+}
+function buildHero(){
+  const currentId = heroList[hi]?.c.id;
+  clearTimeout(heroResetTimer);
+  heroList = wide.matches && HERO_SETS.wide.length ? HERO_SETS.wide : HERO_SETS.tall;
+  const many = heroList.length > 1;
+  $('#hero-prev').hidden = $('#hero-next').hidden = bars.hidden = !many;
+  if (!heroList.length) { track.innerHTML = bars.innerHTML = ''; return; }
+  hi = Math.max(0, heroList.findIndex(h => h.c.id === currentId));
+  track.innerHTML = [heroList[heroList.length-1], ...heroList, heroList[0]].map((h, i) => `<div class="slide"><img src="${url(h.src)}" alt="" ${h.rotate ? `class="hero-rot" style="--hero-focus:${CONFIG.HERO_FOCUS[h.c.id] || h.c.pos || '60%'}"` : ''} ${i !== hi+1 ? 'loading="lazy"' : ''}></div>`).join('');
+  bars.innerHTML = heroList.map((h, i) => `<button type="button" data-hero="${i}" aria-label="${esc(h.c.name)} 보기" aria-controls="track" title="${esc(h.c.name)}"></button>`).join('');
+  heroSnap(); heroShow(hi);
+  if (heroStarted) restartHero();
+}
+function heroGo(i, direction = 0){
+  if (heroList.length < 2) return;
+  if (heroPos === 0 || heroPos === heroList.length+1) heroSnap();
+  clearTimeout(heroResetTimer);
+  const previous = hi;
+  hi = heroIndex(i); heroPos = hi+1;
+  if (direction > 0 && previous === heroList.length-1 && hi === 0) heroPos = heroList.length+1;
+  if (direction < 0 && previous === 0 && hi === heroList.length-1) heroPos = 0;
+  track.style.transition = ''; track.style.transform = `translateX(${-heroPos*100}%)`; heroShow(hi);
+  if (heroPos === 0 || heroPos === heroList.length+1) {
+    if (reduced) heroSnap(); else heroResetTimer = setTimeout(heroSnap, 800);
+  }
+}
+function startHero(){
+  heroStarted = true;
+  if (reduced || heroTimer || heroList.length < 2) return;
+  heroTimer = setInterval(() => { if (!document.hidden && !document.body.classList.contains('locked') && !(hero.contains(document.activeElement) && document.activeElement.matches(':focus-visible'))) heroGo(hi+1, 1); }, 3467);
+}
+function restartHero(){ clearInterval(heroTimer); heroTimer = undefined; if (heroStarted) startHero(); }
+function heroSelect(i, direction = 0){ heroGo(i, direction); restartHero(); }
+track.addEventListener('transitionend', e => { if (e.target === track && e.propertyName === 'transform' && (heroPos === 0 || heroPos === heroList.length+1)) heroSnap(); });
+$('#hero-prev').addEventListener('click', () => heroSelect(hi-1, -1));
+$('#hero-next').addEventListener('click', () => heroSelect(hi+1, 1));
+bars.addEventListener('click', e => { const b = e.target.closest('[data-hero]'); if (b) heroSelect(+b.dataset.hero); });
+hero.addEventListener('focusout', restartHero);
+hero.addEventListener('keydown', e => {
+  if (!heroStarted || document.body.classList.contains('locked') || e.altKey || e.ctrlKey || e.metaKey || !['ArrowLeft','ArrowRight'].includes(e.key)) return;
+  e.preventDefault(); const d = e.key === 'ArrowRight' ? 1 : -1; heroSelect(hi+d, d);
+});
+let heroTouch = null;
+hero.addEventListener('touchstart', e => { heroTouch = e.touches.length === 1 && !e.target.closest('button') ? {x:e.touches[0].clientX,y:e.touches[0].clientY} : null; }, {passive:true});
+hero.addEventListener('touchend', e => {
+  if (!heroTouch) return;
+  const dx = e.changedTouches[0].clientX-heroTouch.x, dy = e.changedTouches[0].clientY-heroTouch.y; heroTouch = null;
+  if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)*1.5) { const d = dx < 0 ? 1 : -1; heroSelect(hi+d, d); }
+}, {passive:true});
+hero.addEventListener('touchcancel', () => { heroTouch = null; }, {passive:true});
+wide.addEventListener('change', buildHero);
+buildHero();
+$('#hero-name').addEventListener('click', () => { if (heroList.length) mOpen(heroList[hi].c.id); });
+
+/* nav + floating buttons */
+const nav = $('#nav'), toTop = $('#to-top');
+new IntersectionObserver(([e]) => { const past = !e.isIntersecting; nav.classList.toggle('show', past); toTop.hidden = !past; }, {threshold:.08}).observe($('#hero'));
+toTop.addEventListener('click', () => scrollTo({top:0, behavior: reduced ? 'auto' : 'smooth'}));
+$('#menu-btn').addEventListener('click', () => { const o = nav.classList.toggle('menu-open'); $('#menu-btn').setAttribute('aria-expanded', o); });
+document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('menu-open'); $('#menu-btn').setAttribute('aria-expanded', false); }));
+
+/* lightbox */
+const lb = $('#lb'), lbImg = $('#lb-img'), lbZoom = $('#lb-zoom');
+let lbList = [], lbI = 0, lbReturn = null;
+function lbFit(){ lb.classList.remove('zoomed'); lb.scrollTop = lb.scrollLeft = 0; lbZoom.setAttribute('aria-pressed','false'); lbZoom.textContent = '원본 크기로 확대'; }
+function lbImageReady(){ lb.style.setProperty('--lb-native-width',lbImg.naturalWidth+'px'); lbZoom.disabled = !lbImg.naturalWidth; }
+lbImg.addEventListener('load',lbImageReady);
+lbImg.addEventListener('error',()=>{ lbZoom.disabled = true; });
+lbZoom.addEventListener('click',()=>{ if(lb.classList.contains('zoomed')) { lbFit(); return; } lb.classList.add('zoomed'); lb.scrollTop = lb.scrollLeft = 0; lbZoom.setAttribute('aria-pressed','true'); lbZoom.textContent = '전체 보기'; lb.focus({preventScroll:true}); });
+function lbOpen(list, i){ lbList = list; lbI = i; lbReturn = document.activeElement; lb.classList.add('open'); document.body.classList.add('locked'); lbDraw(); $('#lb-close').focus(); }
+function lbDraw(){ lbFit(); const it = lbList[lbI]; lbImg.src = it.src; lbImg.alt = it.alt || ''; lbZoom.hidden = !it.comic; lbZoom.disabled = true; if(lbImg.complete && lbImg.naturalWidth) lbImageReady();
+  const many = lbList.length > 1; $('#lb-prev').hidden = $('#lb-next').hidden = !many; $('#lb-count').textContent = many ? `${lbI+1} / ${lbList.length}` : ''; }
+function lbStep(d){ if (lbList.length < 2) return; lbI = (lbI + d + lbList.length) % lbList.length; lbDraw(); }
+function lbClose(){ lbFit(); lb.classList.remove('open'); if (!modal.classList.contains('open')) document.body.classList.remove('locked'); if (lbReturn) lbReturn.focus({preventScroll:true}); }
+$('#lb-close').addEventListener('click', lbClose);
+$('#lb-prev').addEventListener('click', () => lbStep(-1));
+$('#lb-next').addEventListener('click', () => lbStep(1));
+lb.addEventListener('click', e => { if (e.target === lb) lbClose(); });
+let tx = null;
+lb.addEventListener('touchstart', e => { tx = !lb.classList.contains('zoomed') && e.touches.length === 1 ? e.touches[0].clientX : null; }, {passive:true});
+lb.addEventListener('touchend', e => { if (tx === null) return; const dx = e.changedTouches[0].clientX - tx; if (Math.abs(dx) > 45) lbStep(dx < 0 ? 1 : -1); tx = null; });
+document.querySelectorAll('[data-lb-single]').forEach(b => b.addEventListener('click', () => lbOpen([{src:url(CONFIG[b.dataset.lbSingle]), alt:b.querySelector('img')?.alt || '바사라의 꽃 세계 지도'}], 0)));
+
+/* prologue */
+const pages = CONFIG.PROLOGUE.map((f, i) => ({src:url(f), alt:`프롤로그 ${i+1}쪽`, comic:true}));
+const pageBtn = (p, i) => `<button class="zoom" data-page="${i}"><img src="${p.src}" alt="${p.alt}" loading="lazy"></button>`;
+$('#comic-first').innerHTML = pages.slice(0, CONFIG.PROLOGUE_FIRST).map((p, i) => pageBtn(p, i)).join('');
+const rest = pages.slice(CONFIG.PROLOGUE_FIRST);
+$('#comic-rest').innerHTML = rest.map((p, i) => pageBtn(p, i + CONFIG.PROLOGUE_FIRST)).join('');
+$('#more-count').textContent = `${rest.length}장 더`;
+if (!rest.length) { $('#more-btn').remove(); $('#comic').classList.add('opened'); }
+$('#more-btn').addEventListener('click', () => {
+  const r = $('#comic-rest'); $('#comic').classList.add('opened');
+  r.style.maxHeight = r.scrollHeight + 'px';
+  setTimeout(() => { r.style.maxHeight = 'none'; }, reduced ? 0 : 1450);
+  $('#more-btn').remove();
+});
+$('#comic').addEventListener('click', e => { const b = e.target.closest('[data-page]'); if (b) lbOpen(pages, +b.dataset.page); });
+
+/* characters */
+const ROLE_GUIDE = {
+  ren:     {short:'지방 영주', note:'간토 지역의 땅과 군대를 다스리는 영주.'},
+  seitora: {short:'지방 영주', note:'오슈 지역의 땅과 군대를 다스리는 영주.'},
+  isana:   {short:'지방 영주', note:'규슈 지역의 땅과 군대를 다스리는 영주.'},
+  soma:    {short:'호위부대 대장', note:'쇼군 가문을 지키는 호위부대를 이끄는 대장.'},
+  hakurei: {short:'귀족 가문의 후계자', note:'귀족 가문인 쿠조가의 뒤를 이어 가문을 이끌 후계자.'},
+  karasu:  {short:'잠입·암살자', note:'은밀한 잠입과 암살을 맡는 시노비(닌자).'},
+  enkyo:   {short:'계율을 어긴 승려', note:'불교의 계율을 지키지 않고 살아가는 승려.'},
+  yugen:   {short:'전통극 배우', note:'일본 전통극인 ‘노’를 공연하는 배우.'},
+  shizuma: {short:'전략을 세우는 참모', note:'아카츠키가의 전략과 계책을 세우며 렌을 보좌하는 참모.'},
+  gon:     {short:'선두의 지휘관', note:'히무로가의 군대에서 가장 먼저 돌격하는 지휘관.'},
+  roku:    {short:'지휘관을 보좌하는 무장', note:'나기가의 이사나를 곁에서 보좌하며 지휘를 돕는 무장.'}
+};
+const filters = $('#filters'), roster = $('#roster');
+const FILTERS = [['all','전체', '#c8a256'], ...Object.entries(FACTIONS).map(([k, v]) => [k, v.name, v.color])];
+filters.innerHTML = FILTERS.map(([k, n, c], i) => `<button data-f="${k}" aria-pressed="${i===0}" style="--fc:${c}">${factionIcon(k)}${n}</button>`).join('');
+function figure(c){
+  if (!c.img) return `<span class="ph" style="--fc:${fc(c.faction)}">${CREST('#c8a256')}<b>${esc(c.ph)}</b></span>`;
+  return c.rotate ? `<img class="rot" src="${url(c.img)}" alt="" loading="lazy" style="object-position:50% ${c.pos||'60%'}">`
+                  : `<img class="flat" src="${url(c.img)}" alt="" loading="lazy">`;
+}
+roster.innerHTML = CHARACTERS.map(c => `<li data-f="${c.faction}"><button class="card" data-id="${c.id}" style="--fc:${fc(c.faction)}">
+  <span class="card-img">${figure(c)}${FACTION_SYMBOLS[characterCrest(c)] ? `<span class="card-symbol">${factionIcon(characterCrest(c))}</span>` : ''}</span>
+  <span class="card-meta"><span class="card-role">${esc(c.role)}</span><span class="card-name">${esc(c.name)}</span>${ROLE_GUIDE[c.id] ? `<span class="card-meaning">${esc(ROLE_GUIDE[c.id].short)}</span>` : ''}</span></button></li>`).join('');
+let currentFilter = 'all';
+filters.addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return;
+  currentFilter = b.dataset.f;
+  filters.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b));
+  roster.querySelectorAll('li').forEach(li => { li.hidden = !(currentFilter === 'all' || li.dataset.f === currentFilter); });
+});
+const visibleIds = () => CHARACTERS.filter(c => currentFilter === 'all' || c.faction === currentFilter).map(c => c.id);
+
+const modal = $('#modal'), mImg = $('#m-img'), mInfo = $('#m-info');
+let mId = null, mReturn = null;
+function profilePoints(items, fallback, compact = false){
+  if (!items?.length) return `<p>${esc(fallback)}</p>`;
+  return `<ul class="m-points${compact ? ' compact' : ''}">${items.map(item => `<li><h5>${esc(item.title)}</h5><p>${item.title === '취향' ? item.text.split(' / ').map(esc).join('<br>') : esc(item.text)}</p></li>`).join('')}</ul>`;
+}
+function mDraw(id){
+  const c = CHARACTERS.find(x => x.id === id), F = FACTIONS[c.faction]; mId = id;
+  const brief = CHARACTER_SUMMARIES[c.id] || {};
+  modal.style.setProperty('--fc', F.color);
+  mImg.innerHTML = `<span class="m-tag">${factionIcon(characterCrest(c))}${esc(F.name)}${F.region ? ' · ' + esc(F.region) : ''}</span>${figure(c).replace(' loading="lazy"','')}`;
+  const gal = (c.gallery || []).map((g, i) => `<button data-g="${i}" aria-label="갤러리 ${i+1}"><img src="${url(g)}" alt="" loading="lazy"></button>`).join('');
+  mInfo.innerHTML = `<h3 class="m-name" id="m-name">${esc(c.name)}<span>${esc(c.kanji)}</span></h3>
+    <ul class="chips"><li>${esc(c.role)}</li><li>${esc(c.age)}</li><li>⚔ ${esc(c.weapon)}</li></ul>
+    ${ROLE_GUIDE[c.id] ? `<p class="m-role-note">${esc(ROLE_GUIDE[c.id].note)}</p>` : ''}
+    <section class="m-sec"><h4>외형</h4>${profilePoints(brief.looks, c.looks, true)}</section>
+    <section class="m-sec"><h4>성격 · 특징</h4>${profilePoints(brief.persona, c.persona)}</section>
+    <section class="m-sec"><h4>소개</h4>${profilePoints(brief.intro, c.intro, true)}</section>
+    ${brief.persona ? `<details class="m-more"><summary>더 자세히 보기</summary><div class="m-more-content"><h5>외형</h5><p>${esc(c.looks)}</p><h5>성격 · 특징</h5><p>${esc(c.persona)}</p><h5>소개</h5><p>${esc(c.intro)}</p></div></details>` : ''}
+    <section class="m-sec"><h4>비밀</h4><button class="secret-btn" aria-expanded="false" aria-controls="secret-body"><span aria-hidden="true">🔒</span><span>눌러서 펼치기</span></button>
+      <div class="secret-body" id="secret-body"><p>${esc(c.secret)}</p></div></section>
+    ${gal ? `<section class="m-sec"><h4>갤러리</h4><div class="thumbs">${gal}</div></section>` : ''}`;
+  mInfo.scrollTop = 0; modal.querySelector('.m-box').scrollTop = 0;
+}
+function mOpen(id){ mReturn = document.activeElement; mDraw(id); modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); document.body.classList.add('locked'); $('#m-close').focus(); }
+function mClose(){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); document.body.classList.remove('locked'); if (mReturn) mReturn.focus(); }
+function mStep(d){ const ids = visibleIds(); const i = ids.indexOf(mId); mDraw(ids[(i + d + ids.length) % ids.length]); }
+roster.addEventListener('click', e => { const b = e.target.closest('.card'); if (b) mOpen(b.dataset.id); });
+$('#m-close').addEventListener('click', mClose);
+$('#m-prev').addEventListener('click', () => mStep(-1));
+$('#m-next').addEventListener('click', () => mStep(1));
+modal.addEventListener('click', e => { if (e.target === modal) mClose(); });
+mInfo.addEventListener('click', e => {
+  const s = e.target.closest('.secret-btn');
+  if (s) { const body = $('#secret-body'), open = s.getAttribute('aria-expanded') !== 'true';
+    s.setAttribute('aria-expanded', open); s.children[0].textContent = open ? '🔓' : '🔒'; s.children[1].textContent = open ? '접기' : '눌러서 펼치기';
+    body.style.maxHeight = open ? body.scrollHeight + 'px' : '0px';
+    if (open) setTimeout(() => body.scrollIntoView({block:'nearest', behavior: reduced ? 'auto' : 'smooth'}), 300);
+    return; }
+  const g = e.target.closest('[data-g]');
+  if (g) { const c = CHARACTERS.find(x => x.id === mId); lbOpen(c.gallery.map(f => ({src:url(f), alt:c.name})), +g.dataset.g); }
+});
+
+/* keyboard */
+document.addEventListener('keydown', e => {
+  if (lb.classList.contains('open')) { if (e.key === 'Escape') lbClose(); if (!lb.classList.contains('zoomed')) { if (e.key === 'ArrowRight') lbStep(1); if (e.key === 'ArrowLeft') lbStep(-1); } return; }
+  if ($('#place-dialog').open) { if (e.key === 'Escape') { e.preventDefault(); $('#place-dialog').close(); } return; }
+  if ($('#persona-dialog').open) { if (e.key === 'Escape') { e.preventDefault(); $('#persona-dialog').close(); } return; }
+  if (modal.classList.contains('open')) { if (e.key === 'Escape') mClose(); if (e.key === 'ArrowRight') mStep(1); if (e.key === 'ArrowLeft') mStep(-1); }
+});
+
+/* world: nominal hierarchy and competing houses */
+const POWER_GROUPS = [
+  {f:'akatsuki', lord:'ren', helper:'shizuma', strength:'개인의 무력', supportRole:'전략 참모'},
+  {f:'himuro', lord:'seitora', helper:'gon', strength:'군대의 조직력', supportRole:'선두 지휘관'},
+  {f:'nagi', lord:'isana', helper:'roku', strength:'교역과 해상전', supportRole:'보좌역'}
+];
+$('#power-ruler-symbol').innerHTML = crestImage('shogunate');
+$('#power-houses').innerHTML = POWER_GROUPS.map(g => {
+  const F = FACTIONS[g.f], lord = CHARACTERS.find(c => c.id === g.lord), helper = CHARACTERS.find(c => c.id === g.helper);
+  const shortName = c => c.name.split(' ').pop();
+  return `<article class="power-house" style="--fc:${F.color};--house-art:url('${CONFIG.CDN + encodeURIComponent(FACTION_SYMBOLS[g.f])}')" aria-label="${esc(F.name)} · ${esc(lord.name)} · ${esc(helper.name)}">
+    <div class="power-family-head">${factionIcon(g.f)}<h3>${esc(F.name)}</h3></div>
+    <span class="power-strength">${esc(g.strength)}</span>
+    <div class="power-person"><strong>${esc(shortName(lord))}</strong><span>${esc(F.region)}의 영주</span></div>
+    <div class="power-support"><strong>${esc(shortName(helper))}</strong><span>${esc(g.supportRole)}</span></div>
+  </article>`;
+}).join('');
+
+
+/* world: houses */
+$('#houses').innerHTML = HOUSES.map(h => { const F = FACTIONS[h.f]; return `<article class="house" style="--fc:${F.color}">
+  <div class="house-head"><span class="house-mark" aria-hidden="true">${factionIcon(h.f)}</span><h3>${F.name}<small>${F.region}</small></h3></div>
+  <p>${h.text}</p><dl><dt>강점</dt><dd>${h.strength}</dd><dt>본거지</dt><dd>${h.seat}</dd><dt>인물</dt><dd>${h.people}</dd></dl></article>`; }).join('');
+
+const PLACE_BRIEFS = {
+  "홍련성": {
+    "brief": "렌이 다스리는 아카츠키가의 성. 화려한 연회와 결투가 끊이지 않는다.",
+    "tags": [
+      "붉은 성",
+      "연회와 결투",
+      "번화한 성 아래 마을"
+    ]
+  },
+  "북진성": {
+    "brief": "세이토라가 다스리는 히무로가의 성. 눈보라 속에서도 훈련과 경계가 이어진다.",
+    "tags": [
+      "설원의 성채",
+      "엄격한 군율",
+      "기마 훈련"
+    ]
+  },
+  "해문관": {
+    "brief": "이사나의 나기가가 자리 잡은 항구 저택. 외국 상인과 배, 밀수품이 모인다.",
+    "tags": [
+      "항구 저택",
+      "외국과의 교역",
+      "밀수품"
+    ]
+  },
+  "쇼군가 저택": {
+    "brief": "교토 중심에 있는 쇼군 가문의 저택. 화려함은 남았지만 사람도 경비도 줄어들었다.",
+    "tags": [
+      "쇼군 가문의 거처",
+      "텅 빈 방",
+      "허술한 경비"
+    ]
+  },
+  "쿠조가 저택": {
+    "brief": "몰락 뒤에도 귀족의 격식을 지키는 저택. 지방 영주들의 사절이 드나들며 벼슬을 거래한다.",
+    "tags": [
+      "귀족의 격식",
+      "사절의 방문",
+      "벼슬 거래"
+    ]
+  },
+  "가모가와 강변": {
+    "brief": "유겐이 공연하는 강변. 낮에는 장터, 밤에는 암거래가 열리고 소문과 정보가 모인다.",
+    "tags": [
+      "유겐의 공연",
+      "낮의 장터",
+      "밤의 암거래"
+    ]
+  },
+  "시라카와 관문": {
+    "brief": "간토와 오슈가 맞닿은 국경. 아카츠키가와 히무로가가 서로 대치하는 최전선이다.",
+    "tags": [
+      "두 가문의 국경",
+      "목책과 망루",
+      "대치 최전선"
+    ]
+  }
+};
+/* map: illuminated places and their popup */
+const MAP_SPOTS = [
+  {f:'akatsuki',name:'홍련성',x:84,y:43.8},
+  {f:'himuro',name:'북진성',x:89.2,y:17.2},
+  {f:'nagi',name:'해문관',x:16.7,y:67.2},
+  {f:'kyoto',name:'교토',x:53.1,y:43.1},
+  {f:'border',name:'시라카와 관문',x:76.8,y:31.3}
+];
+const placeDialog = $('#place-dialog');
+let placeReturn = null, placeGroup = null;
+const mapFaction = f => f === 'border' ? {name:'국경',region:'간토 · 오슈',color:'#c8a256'} : f === 'kyoto' ? {...FACTIONS.kyoto,region:'쇼군 가문 · 귀족'} : FACTIONS[f];
+$('#map-pins').innerHTML = MAP_SPOTS.map((p,i) => `<button type="button" class="map-pin" data-map-group="${p.f}" aria-label="${esc(p.name)} 설명 보기" aria-haspopup="dialog" style="--x:${p.x}%;--y:${p.y}%;--fc:${mapFaction(p.f).color};--delay:${-i*.45}s"><span class="map-pin-dot${FACTION_SYMBOLS[p.f] ? ' has-crest' : ''}" aria-hidden="true">${FACTION_SYMBOLS[p.f] ? crestImage(p.f) : ''}</span><span class="map-pin-name" aria-hidden="true">${esc(p.name)}</span></button>`).join('');
+$('#map-keys').innerHTML = MAP_SPOTS.map(p => `<button type="button" class="map-key" data-map-group="${p.f}" aria-haspopup="dialog" style="--fc:${mapFaction(p.f).color}">${FACTION_SYMBOLS[p.f] ? factionIcon(p.f) : '<span class="map-key-dot" aria-hidden="true"></span>'}${esc(p.name)}</button>`).join('');
+const PLACE_HEADERS = {
+  '홍련성': {title:'아카츠키 가 • 간토',crests:['akatsuki'],image:'홍련성.jpeg',imageAlt:'붉은 성과 연회, 결투가 펼쳐지는 홍련성'},
+  '북진성': {title:'히무로 가 • 오슈',crests:['himuro'],image:'북진성.jpeg',imageAlt:'눈보라 속 성문과 기마대가 있는 북진성'},
+  '해문관': {title:'나기 가 • 규슈',crests:['nagi'],image:'해문관.jpeg',imageAlt:'해안과 항구를 내려다보는 해문관'},
+  '쇼군가 저택': {title:'쇼군 가 • 교토',crests:['shogunate'],image:'쇼군가.jpeg',imageAlt:'금박 병풍으로 둘러싸인 쇼군가 저택의 방'},
+  '쿠조가 저택': {title:'쿠조 가 • 교토',crests:[],image:'쿠조가문.jpeg',imageAlt:'보랏빛 등꽃과 정원이 있는 쿠조가 저택'},
+  '가모가와 강변': {title:'교토 • 가모가와',crests:[],image:'가모가와강가.jpeg',imageAlt:'물가의 공연장과 밤 시장이 있는 가모가와 강변'},
+  '시라카와 관문': {title:'간토 • 오슈의 국경',crests:['akatsuki','himuro'],image:'시라카와관문.jpeg',imageAlt:'붉은 나무와 설원이 맞닿은 시라카와 관문'}
+};
+function drawPlace(index){
+  const p = placeGroup.items[index], brief = PLACE_BRIEFS[p.name];
+  const header = PLACE_HEADERS[p.name];
+  $('#place-faction').classList.toggle('is-plain',header.crests.length === 0);
+  $('#place-faction').innerHTML = `${header.crests.length ? `<div class="place-crest-row${header.crests.length > 1 ? ' is-pair' : ''}" aria-hidden="true">${header.crests.map(key=>`<span class="place-crest">${crestImage(key)}</span>`).join('')}</div>` : ''}<h2 class="place-faction-title" id="place-faction-title">${esc(header.title)}</h2>`;
+  $('#place-title').innerHTML = `${esc(p.name)}${p.kanji ? `<small>${esc(p.kanji)}</small>` : ''}`;
+  $('#place-content').innerHTML = `<figure class="place-picture"><img src="${esc(CONFIG.CDN+encodeURIComponent(header.image))}" alt="${esc(header.imageAlt)}" width="1216" height="832" decoding="async"></figure><p class="place-brief">${esc(brief.brief)}</p><ul class="place-tags">${brief.tags.map(t=>`<li>${esc(t)}</li>`).join('')}</ul><div class="place-people"><h4>관련 인물</h4><ul class="who">${p.who.map(w=>`<li>${esc(w)}</li>`).join('')}</ul></div><details class="place-more"><summary>더 자세히 보기</summary><p>${esc(p.text)}</p></details>`;
+  $('#place-switches').querySelectorAll('button').forEach((b,i)=>b.setAttribute('aria-pressed',String(i===index)));
+}
+function openPlace(f,trigger){
+  placeGroup = PLACES.find(g=>g.f===f); if(!placeGroup) return;
+  placeReturn = trigger;
+  const F = mapFaction(f), switches = $('#place-switches');
+  placeDialog.style.setProperty('--fc',F.color);
+  switches.hidden = placeGroup.items.length<2;
+  switches.innerHTML = placeGroup.items.map((p,i)=>`<button type="button" data-place-index="${i}" aria-pressed="${i===0}">${esc(p.name)}</button>`).join('');
+  drawPlace(0);
+  placeDialog.showModal(); placeDialog.scrollTop = 0;
+  document.body.classList.add('locked'); $('#place-close').focus({preventScroll:true});
+}
+$('#map').addEventListener('click',e=>{const b=e.target.closest('[data-map-group]');if(b) openPlace(b.dataset.mapGroup,b);});
+$('#place-switches').addEventListener('click',e=>{const b=e.target.closest('[data-place-index]');if(b) drawPlace(+b.dataset.placeIndex);});
+$('#place-close').addEventListener('click',()=>placeDialog.close());
+placeDialog.addEventListener('click',e=>{if(e.target!==placeDialog)return;const r=placeDialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)placeDialog.close();});
+placeDialog.addEventListener('close',()=>{if(placeDialog.open)return;if(!$('#gate')&&!$('#persona-dialog').open&&!modal.classList.contains('open')&&!lb.classList.contains('open'))document.body.classList.remove('locked');if(placeReturn?.isConnected)placeReturn.focus({preventScroll:true});});
+
+/* guide: relations */
+$('#rels').innerHTML = RELS.map(([e, n, d]) => `<li><span class="e" aria-hidden="true">${e}</span><div><b>${n}</b>${d ? `<span>${d}</span>` : ''}</div></li>`).join('');
+const PERSONA_OPTIONS = {
+  "fixedIdentity": "쇼군의 유일한 후계",
+  "profiles": [
+    {
+      "id": "katana",
+      "weapon": "카타나",
+      "weaponNote": "긴 칼로 거리를 지키며 기본적인 검술을 펼치는 데 능함",
+      "backgrounds": [
+        "어릴 때부터 저택의 호위에게 기초 검술을 배웠다.",
+        "의례용 검을 다루다가 호신 수련까지 이어 갔다.",
+        "근위들의 훈련을 지켜보다 직접 검을 배우기 시작했다."
+      ]
+    },
+    {
+      "id": "wakizashi",
+      "weapon": "와키자시",
+      "weaponNote": "짧은 칼로 좁은 곳에서도 몸을 지키는 데 능함",
+      "backgrounds": [
+        "호위에게 짧은 검으로 몸을 지키는 법을 배웠다.",
+        "긴 칼 대신 휴대하기 쉬운 짧은 검을 익혔다.",
+        "일상에서 지닐 수 있는 칼로 호신 수련을 해 왔다."
+      ]
+    },
+    {
+      "id": "dagger",
+      "weapon": "단검",
+      "weaponNote": "작은 칼을 다루며 가까운 거리에서 몸을 지키는 데 능함",
+      "backgrounds": [
+        "큰 무기를 들지 않고 스스로를 지키는 법을 배웠다.",
+        "호위에게 작은 칼을 다루는 기본을 배웠다.",
+        "자주 오가는 길에서 쓸 호신 수단으로 단검을 익혔다."
+      ]
+    },
+    {
+      "id": "spear",
+      "weapon": "창",
+      "weaponNote": "창의 긴 자루를 이용해 상대의 접근을 막는 데 능함",
+      "backgrounds": [
+        "저택의 경비와 함께 창의 기초를 배우며 지냈다.",
+        "근위들의 창 훈련을 지켜보다 직접 수련을 받았다.",
+        "검술 교육 뒤에 창을 다루는 법도 배웠다."
+      ]
+    },
+    {
+      "id": "bow",
+      "weapon": "활",
+      "weaponNote": "멀리 있는 표적을 겨누어 화살을 쏘는 데 능함",
+      "backgrounds": [
+        "호위에게 궁술의 기본을 배우며 자랐다.",
+        "어릴 때부터 활쏘기를 배우며 꾸준히 수련했다.",
+        "예법 교육과 함께 활을 다루는 법을 익혔다."
+      ]
+    },
+    {
+      "id": "matchlock",
+      "weapon": "화승총",
+      "weaponNote": "화승총을 손질하고 멈춰 있는 표적을 조준하는 데 능함",
+      "backgrounds": [
+        "교역으로 들어온 총을 구해 기본 취급법을 배웠다.",
+        "총을 다루는 호위에게 손질과 조준을 배웠다.",
+        "외국의 무기를 접한 뒤 화승총을 익히기 시작했다."
+      ]
+    },
+    {
+      "id": "iron-fan",
+      "weapon": "철선",
+      "weaponNote": "단단한 쇠 부채로 공격을 막고 물러날 틈을 만드는 데 능함",
+      "backgrounds": [
+        "예법을 배우면서 부채를 이용한 호신도 익혔다.",
+        "칼 대신 지닐 호신 도구로 철선을 배웠다.",
+        "호위의 가르침으로 쇠 부채를 다루기 시작했다."
+      ]
+    },
+    {
+      "id": "unarmed",
+      "weapon": "무기 없음",
+      "weaponNote": "주변의 상황을 살피고 도움을 구할 대상을 찾는 데 능함",
+      "backgrounds": [
+        "호위의 보호 아래 문서 읽기와 예법을 배우며 자랐다.",
+        "사절을 맞는 자리에서 사람과 상황을 살피는 법을 배웠다.",
+        "검술 대신 가문의 살림과 보고를 정리하는 일을 익혔다."
+      ]
+    },
+    {
+      "id": "rhetoric",
+      "weapon": "언변",
+      "weaponNote": "칼 대신 협상과 설득으로 자신의 요구를 전하는 데 능함",
+      "backgrounds": [
+        "사절을 응대하는 자리에서 협상의 말을 배웠다.",
+        "가문의 예법 교육을 받으며 설득하는 법을 익혔다.",
+        "오가는 거래를 지켜보며 조건을 주고받는 법을 배웠다."
+      ]
+    },
+    {
+      "id": "brush",
+      "weapon": "붓",
+      "weaponNote": "흩어진 보고를 정리하고 편지로 뜻을 분명히 전하는 데 능함",
+      "backgrounds": [
+        "검술보다 글과 기록 정리에 많은 시간을 들이며 자랐다.",
+        "서신을 맡는 이에게 보고와 편지를 쓰는 법을 배웠다.",
+        "가문의 문서를 옮겨 적으며 글을 다루는 기본을 익혔다."
+      ]
+    }
+  ],
+  "goals": [
+    "쇼군가를 스스로의 힘으로 일으켜야 해",
+    "핏줄뿐 아니라 내 능력으로도 인정받고 싶어",
+    "곁에 남은 사람들만큼은 내 손으로 지키고 싶어",
+    "내 삶을 남의 계산에 맡길 수는 없어",
+    "믿고 함께할 동맹을 내 뜻으로 골라야 해",
+    "끝없는 전쟁을 멈출 길을 찾아야 해",
+    "싸움 없이 풀 수 있는 길도 찾아보고 싶어",
+    "사람들이 내일을 두려워하지 않는 세상을 만들고 싶어",
+    "내 이름으로 한 약속은 내 힘으로 지키고 싶어",
+    "물려받은 이름에 걸맞은 선택을 내가 해야 해"
+  ]
+};
+PERSONA_OPTIONS.extras = [
+  {key:"token", label:"지닌 증표", list:[
+    "쇼군가 문장이 새겨진 작은 옻칠 약통을 허리에 찬다.",
+    "하오리 안감에 쇼군가 문장이 수놓여 있다.",
+    "쇼군가 문장이 찍힌 부채를 늘 손에 쥐고 다닌다.",
+    "쇼군가 문장이 새겨진 인장을 비단 주머니에 넣어 목에 걸었다.",
+    "쇼군가 문장을 수놓은 부적 주머니를 소매 안에 넣고 다닌다.",
+    "쇼군가 문장이 찍힌 나무 패를 품에 지녔다.",
+    "쇼군의 서명이 적힌 서찰을 접어 품에 넣고 다닌다.",
+    "쇼군가 문장이 새겨진 허리띠 장식을 늘 찬다.",
+    "쇼군가 문장이 새겨진 작은 거울을 비단에 싸서 지니고 다닌다."
+  ]},
+  {key:"rumor", label:"도는 소문", list:[
+    "몸이 약해 저택 밖에 나오지 못한다더라.",
+    "이미 죽었고, 저택에는 대역이 있다더라.",
+    "어느 절에 숨겨져 자랐다더라.",
+    "칼을 쥐면 근위도 당해 내지 못한다더라.",
+    "얼굴을 본 사람은 모두 입막음을 당했다더라.",
+    "교토가 불타던 날 함께 사라졌다더라.",
+    "쇼군보다 더 무서운 사람이라더라.",
+    "누구와도 혼인하지 않겠다고 선언했다더라.",
+    "이미 어느 가문과 혼약을 맺었다더라.",
+    "사람의 속마음을 꿰뚫어 보는 눈을 가졌다더라."
+  ]},
+  {key:"world", label:"세상 물정", list:[
+    "저택 담 밖을 거의 나가 본 적이 없다.",
+    "소마 몰래 저택을 빠져나가 장터를 구경하곤 했다.",
+    "바깥소식은 저택을 오가는 사절들에게 귀동냥으로 들었다.",
+    "변장하고 가모가와 강변을 드나들며 소문을 주워들었다.",
+    "돈을 직접 써 본 적이 없어 물건값을 모른다.",
+    "책으로만 세상을 배워 아는 것과 겪은 것이 다르다.",
+    "시종들 틈에 섞여 저잣거리 심부름을 다닌 적이 있다.",
+    "교토 밖으로는 한 번도 나가 본 적이 없다.",
+    "저택의 비밀 통로를 몰래 알아 두었다."
+  ]},
+  {key:"hobby", label:"취미·특기", list:[
+    "와카를 짓는 것을 좋아한다.",
+    "노 공연을 즐겨 본다.",
+    "바둑을 잘 둔다.",
+    "향을 맡고 이름을 맞히는 데 능하다.",
+    "남만에서 들어온 진귀한 물건을 모은다.",
+    "차를 우리는 다도를 익혔다.",
+    "꽃꽂이를 즐긴다.",
+    "피리를 분다.",
+    "수묵화를 그린다.",
+    "옛 이야기책을 몰래 모아 읽는다."
+  ]},
+  {key:"weak", label:"약점", list:[
+    "말을 잘 못 탄다.",
+    "피를 보면 손이 떨린다.",
+    "불길을 보면 몸이 굳는다.",
+    "헤엄을 못 친다.",
+    "술에 약하다.",
+    "높은 곳을 무서워한다.",
+    "거짓말을 하면 얼굴에 다 드러난다.",
+    "길눈이 어둡다.",
+    "잠이 깊어 업어 가도 모른다.",
+    "어둠 속에 혼자 있으면 숨이 가빠진다."
+  ]}
+];
+/* persona: a playable setup for the shogun's sole heir */
+const personaDialog = $('#persona-dialog');
+let currentPersona = null, personaReturn = null, personaProfileIndex = -1, personaRevision = 0;
+const personaPick = list => list[Math.floor(Math.random()*list.length)];
+$('#persona-weapon').innerHTML = '<option value="any">무작위</option>' + PERSONA_OPTIONS.profiles.map(p=>`<option value="${esc(p.id)}">${esc(p.weapon)}</option>`).join('');
+function generatePersona(){
+  const options = PERSONA_OPTIONS, requested = $('#persona-weapon').value;
+  const eligible = options.profiles.map((p,i)=>({p,i})).filter(({p})=>requested==='any'||p.id===requested);
+  const different = eligible.filter(({i})=>i!==personaProfileIndex);
+  const {p:profile,i} = personaPick(different.length ? different : eligible);
+  personaProfileIndex = i;
+  const choices = profile.backgrounds.filter(b=>b!==currentPersona?.background);
+  const goals = options.goals.filter(g=>g!==currentPersona?.goal);
+  const name = $('#persona-input-name').value.trim().replace(/[\r\n\t]+/g,' ').slice(0,20);
+  const extras = {};
+  options.extras.forEach(f=>{const pool=f.list.filter(v=>v!==currentPersona?.extras?.[f.key]); extras[f.key]=personaPick(pool.length?pool:f.list);});
+  currentPersona = {...profile,name,identity:options.fixedIdentity,background:personaPick(choices),goal:personaPick(goals),extras};
+  personaRevision++;
+  drawPersona();
+  $('#persona-copy-status').textContent = '';
+  $('#persona-copy-text').hidden = true;
+  $('#persona-announcement').textContent = `${currentPersona.goal}. 주 무기는 ${profile.weapon}인 설정을 만들었어요.`;
+}
+function drawPersona(){
+  const p = currentPersona;
+  $('#persona-result-goal').textContent = p.goal;
+  $('#persona-result-meta').textContent = p.name ? `이름 · ${p.name}` : '';
+  $('#persona-result-meta').hidden = !p.name;
+  $('#persona-result-identity').textContent = p.identity;
+  $('#persona-result-type').textContent = `주 무기 · ${p.weapon}`;
+  $('#persona-result-summary').textContent = p.weaponNote;
+  $('#persona-result-fields').innerHTML = `<div class="wide"><dt>자라온 배경</dt><dd>${esc(p.background)}</dd></div>` + PERSONA_OPTIONS.extras.map(f=>`<div class="wide"><dt>${esc(f.label)}</dt><dd>${esc(p.extras[f.key])}</dd></div>`).join('');
+}
+function personaText(){
+  const p=currentPersona;
+  return `[페르소나 설정]\n${p.name ? '이름: '+p.name+'\n' : ''}신분: ${p.identity}\n목표: ${p.goal}\n주 무기: ${p.weapon}\n${p.weaponNote}\n자라온 배경: ${p.background}` + PERSONA_OPTIONS.extras.map(f=>`\n${f.label}: ${p.extras[f.key]}`).join('');
+}
+$('#persona-emblem').innerHTML = crestImage('shogunate');
+$('#persona-form').addEventListener('submit',e=>{
+  e.preventDefault(); personaReturn=document.activeElement; generatePersona();
+  personaDialog.showModal(); personaDialog.scrollTop=0;
+  document.body.classList.add('locked'); $('#persona-close').focus({preventScroll:true});
+});
+$('#persona-reroll').addEventListener('click',()=>{generatePersona();personaDialog.scrollTop=0;});
+$('#persona-close').addEventListener('click',()=>personaDialog.close());
+personaDialog.addEventListener('click',e=>{if(e.target!==personaDialog)return;const r=personaDialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)personaDialog.close();});
+personaDialog.addEventListener('close',()=>{if(personaDialog.open)return;if(!$('#gate')&&!placeDialog.open&&!modal.classList.contains('open')&&!lb.classList.contains('open'))document.body.classList.remove('locked');if(personaReturn?.isConnected)personaReturn.focus({preventScroll:true});});
+$('#persona-copy').addEventListener('click',async()=>{
+  if(!currentPersona)return;
+  const content=personaText(), revision=personaRevision; let copied=false;
+  const copyButton=$('#persona-copy'), rerollButton=$('#persona-reroll');
+  copyButton.disabled=rerollButton.disabled=true;
+  try{if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(content);copied=true;}}catch{}
+  if(!copied){
+    const temp=document.createElement('textarea');temp.value=content;temp.setAttribute('readonly','');temp.style.cssText='position:fixed;left:0;top:0;opacity:0;pointer-events:none';
+    personaDialog.append(temp);temp.focus({preventScroll:true});temp.select();
+    try{copied=document.execCommand('copy');}catch{}temp.remove();
+  }
+  copyButton.disabled=rerollButton.disabled=false;
+  if(personaDialog.open)copyButton.focus({preventScroll:true});
+  if(revision!==personaRevision)return;
+  $('#persona-copy-status').textContent=copied ? '설정을 복사했어요.' : '아래 텍스트를 선택해서 복사해주세요.';
+  const fallback=$('#persona-copy-text');fallback.hidden=copied;
+  if(!copied){fallback.value=content;if(personaDialog.open){fallback.focus();fallback.select();}}
+});
+
+</script>
+</body>
+</html>
